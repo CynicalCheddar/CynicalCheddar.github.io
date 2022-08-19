@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['one_0',['ONE',['../namespacecolours.html#a343558fd2ed89ccd3604fe92a7ca6330',1,'colours']]],
-  ['orange_1',['ORANGE',['../namespacecolours.html#abaf338bd0b820cc926c6af453127c9fa',1,'colours']]],
-  ['origin_2',['origin',['../classtracking__aruco__markers_1_1_aruco_track.html#a9ecde902a418fe95ee63084850bc4357',1,'tracking_aruco_markers::ArucoTrack']]],
-  ['origin_5fsubscriber_3',['origin_subscriber',['../classtracking__aruco__markers_1_1_aruco_track.html#ac5887d3f6335088657ac57174fb3cd82',1,'tracking_aruco_markers::ArucoTrack']]]
+  ['n_0',['n',['../class_kinematics__c.html#a49a305311065feda63ba9a069101875b',1,'Kinematics_c']]],
+  ['name_1',['name',['../classros__logger_1_1_ros_logger.html#aad3851de8c9dc04aeed37590e9bc15aa',1,'ros_logger::RosLogger']]],
+  ['node_2',['node',['../class_stack_control__c.html#aaca22d3e5b3ddea5a9a4f758f10b037d',1,'StackControl_c']]]
 ];

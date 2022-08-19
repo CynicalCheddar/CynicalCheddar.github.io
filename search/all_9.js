@@ -1,12 +1,22 @@
 var searchData=
 [
   ['i_0',['i',['../class_state_controller_1_1_state_controller.html#a95e02ed05478aff685f75bba0a471351',1,'StateController::StateController']]],
-  ['id_1',['id',['../class_agent_1_1_agent.html#a34921e496f5d9d21f8775b5700b96bcc',1,'Agent.Agent.id()'],['../classros__logger_1_1_ros_logger.html#a30f7a8d46d62f9db16df5a9125c279bf',1,'ros_logger.RosLogger.id()']]],
-  ['ids_5fpublisher_2',['ids_publisher',['../classrobot__server_1_1_server.html#aef19ad8db8845b9249c3226fca610418',1,'robot_server::Server']]],
-  ['int_3',['int',['../classrobot__server_1_1_server.html#acccae9fb75d45402f98e45f0e0f0ce79',1,'robot_server::Server']]],
-  ['interval_4',['interval',['../class_kinematics__c.html#a591f27185f975ad428a411ff47f10c09',1,'Kinematics_c']]],
-  ['isinrectangle_5',['isInRectangle',['../classrun_simulation_1_1_run_simulation.html#a107ddba56ae57eb07950adde48b1436e',1,'runSimulation::RunSimulation']]],
-  ['isintile_6',['IsInTile',['../class_pathfinding_manager_1_1_pathfinding_manager.html#a7ec65ae6c19f05fbf9b9fbb7f0078f53',1,'PathfindingManager::PathfindingManager']]],
-  ['ispointincircle_7',['isPointInCircle',['../classrun_simulation_1_1_run_simulation.html#a9e84a57cd9824e53627d72ce627135f4',1,'runSimulation::RunSimulation']]],
-  ['isr_8',['ISR',['../encoders_8h.html#a28be307ba14efb36d0965f4be9c19b62',1,'ISR(INT6_vect):&#160;encoders.h'],['../encoders_8h.html#aa64c6dce15e9de9105b4ae9533c9a267',1,'ISR(PCINT0_vect):&#160;encoders.h']]]
+  ['i2c_5faddr_1',['I2C_ADDR',['../_pi_control_8c.html#a2e78122c7a8b3a9480ef8f898cb01c8e',1,'PiControl.c']]],
+  ['i2c_5frecvstatus_2',['i2c_recvStatus',['../class_pi_control__c.html#ab348e5ec716656955aba586daf41da43',1,'PiControl_c']]],
+  ['i2c_5fsendstatus_3',['i2c_sendStatus',['../class_pi_control__c.html#a2bf75639dd312db94b64ce32215ec64e',1,'PiControl_c']]],
+  ['i2c_5fstatus_4',['i2c_status',['../struct_pi_control__c_1_1i2c__status.html',1,'PiControl_c::i2c_status'],['../struct_stack_control__c_1_1i2c__status.html',1,'StackControl_c::i2c_status']]],
+  ['i2c_5fstatus_5frx_5',['i2c_status_rx',['../class_pi_control__c.html#a7f5043662b327e51b9d7c71d68eb3d20',1,'PiControl_c::i2c_status_rx()'],['../class_stack_control__c.html#ad9d7216d14949f26b5cfdad37d94c33c',1,'StackControl_c::i2c_status_rx()']]],
+  ['i2c_5fstatus_5ft_6',['i2c_status_t',['../class_pi_control__c.html#a30277ebcb6d1c7478c40b032479c0443',1,'PiControl_c::i2c_status_t()'],['../class_stack_control__c.html#a9b05074a7735b889b2293e3a894dedbd',1,'StackControl_c::i2c_status_t()']]],
+  ['i2c_5fstatus_5ftx_7',['i2c_status_tx',['../class_pi_control__c.html#aa07194a13e8334aa7dc8108a07b22a1c',1,'PiControl_c::i2c_status_tx()'],['../class_stack_control__c.html#a5e9ca456eee835e25c30d713d9543177',1,'StackControl_c::i2c_status_tx()']]],
+  ['id_8',['id',['../class_agent_1_1_agent.html#a34921e496f5d9d21f8775b5700b96bcc',1,'Agent.Agent.id()'],['../classros__logger_1_1_ros_logger.html#a30f7a8d46d62f9db16df5a9125c279bf',1,'ros_logger.RosLogger.id()'],['../class_stack_control__c.html#a202fcff813983d271ac870ebe619ebf5',1,'StackControl_c::id()']]],
+  ['id_5fcallback_9',['id_callback',['../class_stack_control__c.html#a59e4ef6b068b77311764b8ab46196bf3',1,'StackControl_c']]],
+  ['id_5fmsg_10',['id_msg',['../class_stack_control__c.html#af46c640b57718a3de1c5bec36ad4d2cf',1,'StackControl_c']]],
+  ['id_5fsubscription_11',['id_subscription',['../class_stack_control__c.html#a16076766846aaa8b2d4552cea65ae174',1,'StackControl_c']]],
+  ['ids_5fpublisher_12',['ids_publisher',['../classrobot__server_1_1_server.html#aef19ad8db8845b9249c3226fca610418',1,'robot_server::Server']]],
+  ['int_13',['int',['../classrobot__server_1_1_server.html#acccae9fb75d45402f98e45f0e0f0ce79',1,'robot_server::Server']]],
+  ['interval_14',['interval',['../class_kinematics__c.html#a591f27185f975ad428a411ff47f10c09',1,'Kinematics_c']]],
+  ['isinrectangle_15',['isInRectangle',['../classrun_simulation_1_1_run_simulation.html#a107ddba56ae57eb07950adde48b1436e',1,'runSimulation::RunSimulation']]],
+  ['isintile_16',['IsInTile',['../class_pathfinding_manager_1_1_pathfinding_manager.html#a7ec65ae6c19f05fbf9b9fbb7f0078f53',1,'PathfindingManager::PathfindingManager']]],
+  ['ispointincircle_17',['isPointInCircle',['../classrun_simulation_1_1_run_simulation.html#a9e84a57cd9824e53627d72ce627135f4',1,'runSimulation::RunSimulation']]],
+  ['isr_18',['ISR',['../class_encoders__c.html#a97b4ed0ada44d60cbc7559d1188dc13d',1,'Encoders_c::ISR(INT6_vect)'],['../class_encoders__c.html#ac59863f4c577172e749340dcc5b2e9b2',1,'Encoders_c::ISR(PCINT0_vect)']]]
 ];

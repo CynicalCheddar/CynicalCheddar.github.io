@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['x_5fglobal_0',['x_global',['../class_kinematics__c.html#aa625a14e3733a5eaac6e8b726ae254ce',1,'Kinematics_c']]],
-  ['x_5fglobal_5fdebug_1',['x_global_debug',['../class_kinematics__c.html#a3e7956c31fea5e68c30cac41ac1fc975',1,'Kinematics_c']]],
-  ['xr_2',['Xr',['../class_kinematics__c.html#a01cd3ae2c10bd82f5d1b90d67d5f8750',1,'Kinematics_c']]]
+  ['vector3_0',['Vector3',['../classtracking__aruco__markers_1_1_aruco_track.html#a44dfa2fa9459b106f266459cacc8d19e',1,'tracking_aruco_markers::ArucoTrack']]],
+  ['vector_5fmsg_1',['vector_msg',['../class_stack_control__c.html#a5887b8478941b4699bd131814e628c54',1,'StackControl_c']]],
+  ['vector_5fsubscriber_2',['vector_subscriber',['../class_stack_control__c.html#a6a0a8f40892cd15ba57e8f29de5a6739',1,'StackControl_c']]],
+  ['vectorpublisher_3',['vectorPublisher',['../class_agent_1_1_agent.html#a24cd8b1166ba0d503edd11bb707ee57a',1,'Agent::Agent']]],
+  ['vectors_5fto_5frobots_4',['vectors_to_robots',['../classtracking__aruco__markers_1_1_aruco_track.html#a9707eae534143779377b864f5ec2174b',1,'tracking_aruco_markers::ArucoTrack']]]
 ];

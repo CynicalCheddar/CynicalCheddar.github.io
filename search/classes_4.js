@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pathfindingmanager_0',['PathfindingManager',['../class_pathfinding_manager_1_1_pathfinding_manager.html',1,'PathfindingManager']]]
+  ['loggernode_0',['LoggerNode',['../classlog__display_1_1_logger_node.html',1,'log_display']]]
 ];

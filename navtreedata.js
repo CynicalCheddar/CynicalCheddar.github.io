@@ -49,14 +49,14 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", null ],
+        [ "Typedefs", "functions_type.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
@@ -67,8 +67,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_agent_8py.html",
-"class_state_controller_1_1_state_controller.html#af20b8325b3bfae72b9c0612f071923fc",
-"globals_vars.html"
+"class_pi_control__c.html#a7f5043662b327e51b9d7c71d68eb3d20",
+"classtracking__aruco__markers_1_1_aruco_track.html#a96ad70391035a38689064196c2b10f61"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

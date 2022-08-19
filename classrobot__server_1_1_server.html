@@ -194,6 +194,100 @@ Publishers:
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae2f25987a696882091ed95e415676cde" name="ae2f25987a696882091ed95e415676cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2f25987a696882091ed95e415676cde">&#9670;&nbsp;</a></span>setup_robot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def robot_server.Server.setup_robot </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrobot__server_1_1_robot.html">Robot</a>&#160;</td>
+          <td class="paramname"><em>robot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Setup_Robot is called by register_callback upon a successful registration and setup of a new robot.
+This is to be distinguished from the standard setup function 'setup()' in StackControl.ino 
+
+setup_robot takes parameter robot object as type Robot.
+
+A ROS publisher and subscriber are created specific to this robot:
+
+Robot marker publisher:
+
+    The robot marker publisher topic name is in the format '/robot{robot.id}/markers' where id is an attribute of object robot.
+    The publisher facilitates the sending of Int64 values, used to describe the binary representation of ArUco markers.
+    The robot's StackControl script on the m5 Stack hosts the corresponding topic subscriber and displays the marker upon receiving a valid Int64.
+
+    create_publisher(Int64, f'/robot{robot.id}/markers', 10)
+
+Robot heartbeat subscriber:
+
+    Creates a unique topic subscriber with topic name in the format '/robot{robot.id}/heartbeat' where id is an attribute of object robot.
+    Calls method heartbeat_callback after receiving ping from m5 stack aboard robot.
+
+    create_subscription(Bool, f'/robot{robot.id}/heartbeat', robot.heartbeat_callback, 10)</pre> 
+</div>
+</div>
+<a id="afdd28a98af6dc54055d69a1fa46d8ec0" name="afdd28a98af6dc54055d69a1fa46d8ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd28a98af6dc54055d69a1fa46d8ec0">&#9670;&nbsp;</a></span>register_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def robot_server.Server.register_callback </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int32&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Method register_callback is the callback of the register_subscription subscriber and is called after a robot has successfully completed
+its setup routine.
+
+register_callback takes a ROS message 'msg' of type Int32 as its parameter.
+
+Global variable self.next_id tracks next unique ID to assign to robots and agents.
+
+The contents of 'msg' may be -1 or any other integer, determining two cases.
+
+Case 1:
+    If the data of msg is equal to -1, then the StackControl script on the robot's onboard m5 stack has finished its initial setup
+    and is requesting that it is given a unique robot ID.
+    In this case, self.next_id bundled into an Int32 message and sent to the robot, after which it is incremented.
+
+Case 2:
+    If the data of msg is any other value than -1, then it is interpreted as an acknowledgement of the robot's newly assigned ID.
+    This is sent after the second phase of the robot's setup is complete, after having requested its new ID. Msg contains the new ID.
+    In this case, the value of msg is compared to all other active IDs and subject to error checking.
+    A warning if the ID is a duplicate.</pre> 
+</div>
+</div>
 <a id="a920c266a98e7f423302982767e71fc57" name="a920c266a98e7f423302982767e71fc57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a920c266a98e7f423302982767e71fc57">&#9670;&nbsp;</a></span>check_alive()</h2>
 
@@ -256,111 +350,25 @@ Its id is removed from the list of active IDs.
 Finally, the robot itself is removed from the list of active robots.</pre> 
 </div>
 </div>
-<a id="afdd28a98af6dc54055d69a1fa46d8ec0" name="afdd28a98af6dc54055d69a1fa46d8ec0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdd28a98af6dc54055d69a1fa46d8ec0">&#9670;&nbsp;</a></span>register_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def robot_server.Server.register_callback </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Int32&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Method register_callback is the callback of the register_subscription subscriber and is called after a robot has successfully completed
-its setup routine.
-
-register_callback takes a ROS message 'msg' of type Int32 as its parameter.
-
-Global variable self.next_id tracks next unique ID to assign to robots and agents.
-
-The contents of 'msg' may be -1 or any other integer, determining two cases.
-
-Case 1:
-    If the data of msg is equal to -1, then the StackControl script on the robot's onboard m5 stack has finished its initial setup
-    and is requesting that it is given a unique robot ID.
-    In this case, self.next_id bundled into an Int32 message and sent to the robot, after which it is incremented.
-
-Case 2:
-    If the data of msg is any other value than -1, then it is interpreted as an acknowledgement of the robot's newly assigned ID.
-    This is sent after the second phase of the robot's setup is complete, after having requested its new ID. Msg contains the new ID.
-    In this case, the value of msg is compared to all other active IDs and subject to error checking.
-    A warning if the ID is a duplicate.</pre> 
-</div>
-</div>
-<a id="ae2f25987a696882091ed95e415676cde" name="ae2f25987a696882091ed95e415676cde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2f25987a696882091ed95e415676cde">&#9670;&nbsp;</a></span>setup_robot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def robot_server.Server.setup_robot </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classrobot__server_1_1_robot.html">Robot</a>&#160;</td>
-          <td class="paramname"><em>robot</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Setup_Robot is called by register_callback upon a successful registration and setup of a new robot.
-This is to be distinguished from the standard setup function 'setup()' in StackControl.ino 
-
-setup_robot takes parameter robot object as type Robot.
-
-A ROS publisher and subscriber are created specific to this robot:
-
-Robot marker publisher:
-
-    The robot marker publisher topic name is in the format '/robot{robot.id}/markers' where id is an attribute of object robot.
-    The publisher facilitates the sending of Int64 values, used to describe the binary representation of ArUco markers.
-    The robot's StackControl script on the m5 Stack hosts the corresponding topic subscriber and displays the marker upon receiving a valid Int64.
-
-    create_publisher(Int64, f'/robot{robot.id}/markers', 10)
-
-Robot heartbeat subscriber:
-
-    Creates a unique topic subscriber with topic name in the format '/robot{robot.id}/heartbeat' where id is an attribute of object robot.
-    Calls method heartbeat_callback after receiving ping from m5 stack aboard robot.
-
-    create_subscription(Bool, f'/robot{robot.id}/heartbeat', robot.heartbeat_callback, 10)</pre> 
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8a918d27ca56743b0be13baf69c3e79b" name="a8a918d27ca56743b0be13baf69c3e79b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a918d27ca56743b0be13baf69c3e79b">&#9670;&nbsp;</a></span>added_robot_publisher</h2>
+<a id="acccae9fb75d45402f98e45f0e0f0ce79" name="acccae9fb75d45402f98e45f0e0f0ce79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acccae9fb75d45402f98e45f0e0f0ce79">&#9670;&nbsp;</a></span>int</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">robot_server.Server.added_robot_publisher</td>
+          <td class="memname">robot_server.Server.int</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -387,22 +395,8 @@ Robot heartbeat subscriber:
 
 </div>
 </div>
-<a id="aef19ad8db8845b9249c3226fca610418" name="aef19ad8db8845b9249c3226fca610418"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef19ad8db8845b9249c3226fca610418">&#9670;&nbsp;</a></span>ids_publisher</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">robot_server.Server.ids_publisher</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acccae9fb75d45402f98e45f0e0f0ce79" name="acccae9fb75d45402f98e45f0e0f0ce79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acccae9fb75d45402f98e45f0e0f0ce79">&#9670;&nbsp;</a></span>int</h2>
+<a id="ad4222d56602d0176b0abfb3a88aebc9d" name="ad4222d56602d0176b0abfb3a88aebc9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4222d56602d0176b0abfb3a88aebc9d">&#9670;&nbsp;</a></span>Publisher</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,7 +405,29 @@ Robot heartbeat subscriber:
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">robot_server.Server.int</td>
+          <td class="memname">robot_server.Server.Publisher</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b6fe1a40fe3c4454e7d498bf01c5e59" name="a1b6fe1a40fe3c4454e7d498bf01c5e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6fe1a40fe3c4454e7d498bf01c5e59">&#9670;&nbsp;</a></span>Subscription</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">robot_server.Server.Subscription</td>
         </tr>
       </table>
   </td>
@@ -437,24 +453,16 @@ Robot heartbeat subscriber:
 
 </div>
 </div>
-<a id="ad4222d56602d0176b0abfb3a88aebc9d" name="ad4222d56602d0176b0abfb3a88aebc9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4222d56602d0176b0abfb3a88aebc9d">&#9670;&nbsp;</a></span>Publisher</h2>
+<a id="aef19ad8db8845b9249c3226fca610418" name="aef19ad8db8845b9249c3226fca610418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef19ad8db8845b9249c3226fca610418">&#9670;&nbsp;</a></span>ids_publisher</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">robot_server.Server.Publisher</td>
+          <td class="memname">robot_server.Server.ids_publisher</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -473,6 +481,20 @@ Robot heartbeat subscriber:
 
 </div>
 </div>
+<a id="a8a918d27ca56743b0be13baf69c3e79b" name="a8a918d27ca56743b0be13baf69c3e79b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a918d27ca56743b0be13baf69c3e79b">&#9670;&nbsp;</a></span>added_robot_publisher</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">robot_server.Server.added_robot_publisher</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7d76463b76022d571678adb8ac8d96c0" name="a7d76463b76022d571678adb8ac8d96c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d76463b76022d571678adb8ac8d96c0">&#9670;&nbsp;</a></span>removed_robot_publisher</h2>
 
@@ -483,28 +505,6 @@ Robot heartbeat subscriber:
           <td class="memname">robot_server.Server.removed_robot_publisher</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1b6fe1a40fe3c4454e7d498bf01c5e59" name="a1b6fe1a40fe3c4454e7d498bf01c5e59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b6fe1a40fe3c4454e7d498bf01c5e59">&#9670;&nbsp;</a></span>Subscription</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">robot_server.Server.Subscription</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

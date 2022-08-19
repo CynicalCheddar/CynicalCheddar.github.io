@@ -31,5 +31,8 @@ var annotated_dup =
     [ "tracking_aruco_markers", "namespacetracking__aruco__markers.html", [
       [ "ArucoTrack", "classtracking__aruco__markers_1_1_aruco_track.html", "classtracking__aruco__markers_1_1_aruco_track" ]
     ] ],
-    [ "Kinematics_c", "class_kinematics__c.html", "class_kinematics__c" ]
+    [ "Encoders_c", "class_encoders__c.html", "class_encoders__c" ],
+    [ "Kinematics_c", "class_kinematics__c.html", "class_kinematics__c" ],
+    [ "PiControl_c", "class_pi_control__c.html", "class_pi_control__c" ],
+    [ "StackControl_c", "class_stack_control__c.html", "class_stack_control__c" ]
 ];

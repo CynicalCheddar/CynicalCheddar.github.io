@@ -14,8 +14,9 @@ var searchData=
   ['agentpublisher_11',['agentPublisher',['../class_state_controller_1_1_state_controller.html#af20b8325b3bfae72b9c0612f071923fc',1,'StateController::StateController']]],
   ['agents_12',['agents',['../classrun_simulation_1_1_run_simulation.html#a86ae5bf8d1d8745fb50edb54ccd36baf',1,'runSimulation::RunSimulation']]],
   ['alive_13',['alive',['../classrobot__server_1_1_robot.html#a2d4a68cc53d3b79d98ac95df81401bd5',1,'robot_server::Robot']]],
-  ['app_14',['app',['../namespace_state_controller.html#af8f83a27e65d586d94dc0e3e5fbd8b5c',1,'StateController']]],
-  ['args_15',['args',['../classrun_simulation_1_1_run_simulation.html#ac5a32509f06d0735db39ae036cdce9ac',1,'runSimulation.RunSimulation.args()'],['../class_state_controller_1_1_state_controller.html#af202bc7cdcef65d233b54ea26225da3c',1,'StateController.StateController.args()']]],
-  ['aruco_5fdict_16',['aruco_dict',['../classtracking__aruco__markers_1_1_aruco_track.html#a83621f1f01c7c710a1dbd2ca9815dfdc',1,'tracking_aruco_markers.ArucoTrack.aruco_dict()'],['../namespacemarker__maker.html#a041eb0c5ef9e497495c297a227aa9ce4',1,'marker_maker.aruco_dict()']]],
-  ['arucotrack_17',['ArucoTrack',['../classtracking__aruco__markers_1_1_aruco_track.html',1,'tracking_aruco_markers']]]
+  ['allocator_14',['allocator',['../class_stack_control__c.html#ac0a9cd914169f9cc0c6a9db6cbe2863f',1,'StackControl_c']]],
+  ['app_15',['app',['../namespace_state_controller.html#af8f83a27e65d586d94dc0e3e5fbd8b5c',1,'StateController']]],
+  ['args_16',['args',['../classrun_simulation_1_1_run_simulation.html#ac5a32509f06d0735db39ae036cdce9ac',1,'runSimulation.RunSimulation.args()'],['../class_state_controller_1_1_state_controller.html#af202bc7cdcef65d233b54ea26225da3c',1,'StateController.StateController.args()']]],
+  ['aruco_5fdict_17',['aruco_dict',['../classtracking__aruco__markers_1_1_aruco_track.html#a83621f1f01c7c710a1dbd2ca9815dfdc',1,'tracking_aruco_markers.ArucoTrack.aruco_dict()'],['../namespacemarker__maker.html#a041eb0c5ef9e497495c297a227aa9ce4',1,'marker_maker.aruco_dict()']]],
+  ['arucotrack_18',['ArucoTrack',['../classtracking__aruco__markers_1_1_aruco_track.html',1,'tracking_aruco_markers']]]
 ];

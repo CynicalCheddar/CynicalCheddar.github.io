@@ -9,8 +9,9 @@ var searchData=
   ['dispatchpublisher_6',['dispatchPublisher',['../class_state_controller_1_1_state_controller.html#a7793c54e0353ca07abd47638d7fed8cd',1,'StateController::StateController']]],
   ['displacement_7',['displacement',['../class_kinematics__c.html#a964cd3bbde23099084abd82c47dc4251',1,'Kinematics_c']]],
   ['distance_5fmoved_8',['distance_moved',['../class_kinematics__c.html#a8550b149fa20deb028742d5b7ed701c2',1,'Kinematics_c']]],
-  ['drawself_9',['DrawSelf',['../class_agent_1_1_agent.html#a9ec6ed76b0d97491bf20b4df0df0d334',1,'Agent::Agent']]],
-  ['drawworld_10',['DrawWorld',['../classrun_simulation_1_1_run_simulation.html#a50b53bbdd6e6563109d7ba62f8254696',1,'runSimulation::RunSimulation']]],
-  ['drive_11',['DRIVE',['../namespacecolours.html#a2bb3f8616f29b5d2d5a7ea899df99a1c',1,'colours']]],
-  ['driving_5fpoint_12',['driving_point',['../class_agent_1_1_agent.html#abca496e567f01b7aa7e8260a2090162a',1,'Agent::Agent']]]
+  ['drawmarker_9',['drawMarker',['../class_stack_control__c.html#a1a062f81b175431abcc63c7952a1607f',1,'StackControl_c']]],
+  ['drawself_10',['DrawSelf',['../class_agent_1_1_agent.html#a9ec6ed76b0d97491bf20b4df0df0d334',1,'Agent::Agent']]],
+  ['drawworld_11',['DrawWorld',['../classrun_simulation_1_1_run_simulation.html#a50b53bbdd6e6563109d7ba62f8254696',1,'runSimulation::RunSimulation']]],
+  ['drive_12',['DRIVE',['../namespacecolours.html#a2bb3f8616f29b5d2d5a7ea899df99a1c',1,'colours']]],
+  ['driving_5fpoint_13',['driving_point',['../class_agent_1_1_agent.html#abca496e567f01b7aa7e8260a2090162a',1,'Agent::Agent']]]
 ];

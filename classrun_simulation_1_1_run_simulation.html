@@ -161,6 +161,161 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a3eb8feda7b1da84195fcbb0ad25771d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad0d59bea8a9ce1e87a9a47001cac122a" name="ad0d59bea8a9ce1e87a9a47001cac122a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d59bea8a9ce1e87a9a47001cac122a">&#9670;&nbsp;</a></span>SetConfigCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def runSimulation.RunSimulation.SetConfigCallback </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">SetConfigCallback is a callback invoked by state controller to change the current config (cfg) file in use by the program
+    Parameter 'data' is a message of type std_msgs.msg.String and contains the name of the new config
+
+    Usage:
+    cfgName = data.data
+</pre> 
+</div>
+</div>
+<a id="aaedf75ddd78287ec530c7c9b993a2f85" name="aaedf75ddd78287ec530c7c9b993a2f85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaedf75ddd78287ec530c7c9b993a2f85">&#9670;&nbsp;</a></span>ControllerCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def runSimulation.RunSimulation.ControllerCallback </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">ControllerCallback is called by an agent whenever it has successfully received a new pose via ROS.
+   increments global postedUpdates upon being called</pre> 
+</div>
+</div>
+<a id="ac40796399406f864e099f5ed19f9d4c9" name="ac40796399406f864e099f5ed19f9d4c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac40796399406f864e099f5ed19f9d4c9">&#9670;&nbsp;</a></span>DispatchCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def runSimulation.RunSimulation.DispatchCallback </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Dispatch callback is called whenever a request is sent via ROS on the dispatch topic to turn an agent from standby to dog.
+
+Parameter 'data' is a message of type std_msgs.msg.String and contains the name of the command
+
+The command may either be 'dispatch' or 'recall' 
+
+Usage:
+if(data.data == "dispatch"):
+    // do something
+if(data.data == "recall"):
+    // do something else
+</pre> 
+</div>
+</div>
+<a id="a0acff5ad6d703078e5ec27aaf4e43fc7" name="a0acff5ad6d703078e5ec27aaf4e43fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0acff5ad6d703078e5ec27aaf4e43fc7">&#9670;&nbsp;</a></span>GetAnyAgentFromGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def runSimulation.RunSimulation.GetAnyAgentFromGroup </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment"> Returns any agent from the given group. Used due to how Groups are not naturally iterable.</pre> 
+</div>
+</div>
+<a id="a8be8036b47e2188fda59eaefc7308bbb" name="a8be8036b47e2188fda59eaefc7308bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8be8036b47e2188fda59eaefc7308bbb">&#9670;&nbsp;</a></span>CommandListenerCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def runSimulation.RunSimulation.CommandListenerCallback </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">command listener callback is called whenever a new state is recieved by user via the state controller script
+
+Parameter 'data' is a message of type std_msgs.msg.String and contains the name of the command
+
+The command may be 'set_to_standby', 'setup_start', 'sheep_setup_loop', 'dog_setup_loop', 'pig_setup_loop', 'experiment'
+
+set_to_standby is a special case, as it is the only valid command that does not change the state variable/
+
+Usage:
+if(data.data == "set_to_standby"):
+    for agent in agents:
+        agent.role = "standby"
+
+    SortAgentsByRole()
+else:
+    state = data.data
+</pre> 
+</div>
+</div>
+<a id="ae5e7ed7aa64218277368121e31c5514d" name="ae5e7ed7aa64218277368121e31c5514d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5e7ed7aa64218277368121e31c5514d">&#9670;&nbsp;</a></span>calc_voronoi_partitioning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def runSimulation.RunSimulation.calc_voronoi_partitioning </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>flock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">For a given pair of flock and pack groups, the voronoi partition is calculated.
+
+    Each dog agent has their subflock cleared, then reset with closest sheep agents.
+    
+    Each sheep recalculates their nearest dog </pre> 
+</div>
+</div>
 <a id="ad8c452cf0b2f835449e0041ae6b4b3dc" name="ad8c452cf0b2f835449e0041ae6b4b3dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8c452cf0b2f835449e0041ae6b4b3dc">&#9670;&nbsp;</a></span>add_agent()</h2>
 
@@ -245,120 +400,6 @@ simulationNode: object instance responsible for managing ROS publishers and subs
  newAgentId = msg.data </pre> 
 </div>
 </div>
-<a id="ae5e7ed7aa64218277368121e31c5514d" name="ae5e7ed7aa64218277368121e31c5514d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5e7ed7aa64218277368121e31c5514d">&#9670;&nbsp;</a></span>calc_voronoi_partitioning()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def runSimulation.RunSimulation.calc_voronoi_partitioning </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>flock</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>pack</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">For a given pair of flock and pack groups, the voronoi partition is calculated.
-
-    Each dog agent has their subflock cleared, then reset with closest sheep agents.
-    
-    Each sheep recalculates their nearest dog </pre> 
-</div>
-</div>
-<a id="a8be8036b47e2188fda59eaefc7308bbb" name="a8be8036b47e2188fda59eaefc7308bbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8be8036b47e2188fda59eaefc7308bbb">&#9670;&nbsp;</a></span>CommandListenerCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def runSimulation.RunSimulation.CommandListenerCallback </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">command listener callback is called whenever a new state is recieved by user via the state controller script
-
-Parameter 'data' is a message of type std_msgs.msg.String and contains the name of the command
-
-The command may be 'set_to_standby', 'setup_start', 'sheep_setup_loop', 'dog_setup_loop', 'pig_setup_loop', 'experiment'
-
-set_to_standby is a special case, as it is the only valid command that does not change the state variable/
-
-Usage:
-if(data.data == "set_to_standby"):
-    for agent in agents:
-        agent.role = "standby"
-
-    SortAgentsByRole()
-else:
-    state = data.data
-</pre> 
-</div>
-</div>
-<a id="aaedf75ddd78287ec530c7c9b993a2f85" name="aaedf75ddd78287ec530c7c9b993a2f85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaedf75ddd78287ec530c7c9b993a2f85">&#9670;&nbsp;</a></span>ControllerCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def runSimulation.RunSimulation.ControllerCallback </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">ControllerCallback is called by an agent whenever it has successfully received a new pose via ROS.
-   increments global postedUpdates upon being called</pre> 
-</div>
-</div>
-<a id="ac40796399406f864e099f5ed19f9d4c9" name="ac40796399406f864e099f5ed19f9d4c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac40796399406f864e099f5ed19f9d4c9">&#9670;&nbsp;</a></span>DispatchCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def runSimulation.RunSimulation.DispatchCallback </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Dispatch callback is called whenever a request is sent via ROS on the dispatch topic to turn an agent from standby to dog.
-
-Parameter 'data' is a message of type std_msgs.msg.String and contains the name of the command
-
-The command may either be 'dispatch' or 'recall' 
-
-Usage:
-if(data.data == "dispatch"):
-    // do something
-if(data.data == "recall"):
-    // do something else
-</pre> 
-</div>
-</div>
 <a id="a50b53bbdd6e6563109d7ba62f8254696" name="a50b53bbdd6e6563109d7ba62f8254696"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50b53bbdd6e6563109d7ba62f8254696">&#9670;&nbsp;</a></span>DrawWorld()</h2>
 
@@ -419,6 +460,49 @@ Flock: Group/List of all sheep agents in the simulation
 cfg: Config file dictionary</pre> 
 </div>
 </div>
+<a id="a7e03c6cdbdfb61401faaa6c699fd080e" name="a7e03c6cdbdfb61401faaa6c699fd080e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e03c6cdbdfb61401faaa6c699fd080e">&#9670;&nbsp;</a></span>MoveToPointDecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def runSimulation.RunSimulation.MoveToPointDecision </td>
+          <td>(</td>
+          <td class="paramtype">Agent&#160;</td>
+          <td class="paramname"><em>agent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>movePos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment"> Function repeatedly called to decide if an agent should move to a destination, or if it already has reached destination. 
+Calls function MoveToPoint on specified agent if its displacement from a target is greater than a threshold, otherwise the function HaltAgent is called.
+
+Function HaltAgent sends a command to physical robot to stop moving
+
+Parameters:
+agent: Subject agent of type agent
+movePos: Target screenspace coordinates
+cfg: Config file dictionary
+</pre> 
+</div>
+</div>
 <a id="a66562abbbcf8e0e7727076aeed5102a0" name="a66562abbbcf8e0e7727076aeed5102a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66562abbbcf8e0e7727076aeed5102a0">&#9670;&nbsp;</a></span>FollowPathDecision()</h2>
 
@@ -459,22 +543,74 @@ cfg: Config file dictionary
 </pre> 
 </div>
 </div>
-<a id="a0acff5ad6d703078e5ec27aaf4e43fc7" name="a0acff5ad6d703078e5ec27aaf4e43fc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0acff5ad6d703078e5ec27aaf4e43fc7">&#9670;&nbsp;</a></span>GetAnyAgentFromGroup()</h2>
+<a id="a5910d9b628e0ace642fd28f68d59407d" name="a5910d9b628e0ace642fd28f68d59407d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5910d9b628e0ace642fd28f68d59407d">&#9670;&nbsp;</a></span>StandbySetupUpdateTimestep()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def runSimulation.RunSimulation.GetAnyAgentFromGroup </td>
+          <td class="memname">def runSimulation.RunSimulation.StandbySetupUpdateTimestep </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>group</em></td><td>)</td>
+          <td class="paramname"><em>agents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Function moves all agents tagged standby directly to a unique standby position as defined in config file.
+
+Parameters:
+agents: Group/List of all agents tagged with role standby.
+cfg: Config file dictionary.</pre> 
+</div>
+</div>
+<a id="a04b38f04c860eebc75eaa6ee71e2fbeb" name="a04b38f04c860eebc75eaa6ee71e2fbeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04b38f04c860eebc75eaa6ee71e2fbeb">&#9670;&nbsp;</a></span>SetAllAgentRolesToStandby()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def runSimulation.RunSimulation.SetAllAgentRolesToStandby </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment"> Returns any agent from the given group. Used due to how Groups are not naturally iterable.</pre> 
+<pre class="fragment">Sets all agents in the global agent group (all agents currently in the simulation) to have tagged role 'standby'.</pre> 
+</div>
+</div>
+<a id="aaa82ce8b8f4522fffbc2acae4cfdb144" name="aaa82ce8b8f4522fffbc2acae4cfdb144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa82ce8b8f4522fffbc2acae4cfdb144">&#9670;&nbsp;</a></span>SortAgentsByRole()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def runSimulation.RunSimulation.SortAgentsByRole </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Sorts all agents from the global list of agents by their tagged role. 
+Clears pack, flock, pigs, and standby groups.
+Adds agents back to these global groups based on their tag.
+
+Sets colour of each agent (and robot) after it is sorted to new group.</pre> 
 </div>
 </div>
 <a id="a107ddba56ae57eb07950adde48b1436e" name="a107ddba56ae57eb07950adde48b1436e"></a>
@@ -569,71 +705,6 @@ cfg: Config file dictionary
 
 </div>
 </div>
-<a id="af8d55bee936941b6c61e78fa2c4c5bcb" name="af8d55bee936941b6c61e78fa2c4c5bcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8d55bee936941b6c61e78fa2c4c5bcb">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def runSimulation.RunSimulation.main </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>show_empowerment</em> = <code>False</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment"> Main is the default entry method of the simulation program.
-
-The main function defines the control loop state machine with states:
-
-setup_start:</pre> 
-</div>
-</div>
-<a id="a7e03c6cdbdfb61401faaa6c699fd080e" name="a7e03c6cdbdfb61401faaa6c699fd080e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e03c6cdbdfb61401faaa6c699fd080e">&#9670;&nbsp;</a></span>MoveToPointDecision()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def runSimulation.RunSimulation.MoveToPointDecision </td>
-          <td>(</td>
-          <td class="paramtype">Agent&#160;</td>
-          <td class="paramname"><em>agent</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>movePos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cfg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment"> Function repeatedly called to decide if an agent should move to a destination, or if it already has reached destination. 
-Calls function MoveToPoint on specified agent if its displacement from a target is greater than a threshold, otherwise the function HaltAgent is called.
-
-Function HaltAgent sends a command to physical robot to stop moving
-
-Parameters:
-agent: Subject agent of type agent
-movePos: Target screenspace coordinates
-cfg: Config file dictionary
-</pre> 
-</div>
-</div>
 <a id="a5bb17d17b726709e6391f233ead4064f" name="a5bb17d17b726709e6391f233ead4064f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bb17d17b726709e6391f233ead4064f">&#9670;&nbsp;</a></span>RemoveAgent()</h2>
 
@@ -700,102 +771,31 @@ for agent in agents:
 </pre> 
 </div>
 </div>
-<a id="a04b38f04c860eebc75eaa6ee71e2fbeb" name="a04b38f04c860eebc75eaa6ee71e2fbeb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04b38f04c860eebc75eaa6ee71e2fbeb">&#9670;&nbsp;</a></span>SetAllAgentRolesToStandby()</h2>
+<a id="af8d55bee936941b6c61e78fa2c4c5bcb" name="af8d55bee936941b6c61e78fa2c4c5bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d55bee936941b6c61e78fa2c4c5bcb">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def runSimulation.RunSimulation.SetAllAgentRolesToStandby </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Sets all agents in the global agent group (all agents currently in the simulation) to have tagged role 'standby'.</pre> 
-</div>
-</div>
-<a id="ad0d59bea8a9ce1e87a9a47001cac122a" name="ad0d59bea8a9ce1e87a9a47001cac122a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0d59bea8a9ce1e87a9a47001cac122a">&#9670;&nbsp;</a></span>SetConfigCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def runSimulation.RunSimulation.SetConfigCallback </td>
+          <td class="memname">def runSimulation.RunSimulation.main </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramname"><em>show_empowerment</em> = <code>False</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">SetConfigCallback is a callback invoked by state controller to change the current config (cfg) file in use by the program
-    Parameter 'data' is a message of type std_msgs.msg.String and contains the name of the new config
+<pre class="fragment"> Main is the default entry method of the simulation program.
 
-    Usage:
-    cfgName = data.data
-</pre> 
-</div>
-</div>
-<a id="aaa82ce8b8f4522fffbc2acae4cfdb144" name="aaa82ce8b8f4522fffbc2acae4cfdb144"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa82ce8b8f4522fffbc2acae4cfdb144">&#9670;&nbsp;</a></span>SortAgentsByRole()</h2>
+The main function defines the control loop state machine with states:
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def runSimulation.RunSimulation.SortAgentsByRole </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Sorts all agents from the global list of agents by their tagged role. 
-Clears pack, flock, pigs, and standby groups.
-Adds agents back to these global groups based on their tag.
-
-Sets colour of each agent (and robot) after it is sorted to new group.</pre> 
-</div>
-</div>
-<a id="a5910d9b628e0ace642fd28f68d59407d" name="a5910d9b628e0ace642fd28f68d59407d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5910d9b628e0ace642fd28f68d59407d">&#9670;&nbsp;</a></span>StandbySetupUpdateTimestep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def runSimulation.RunSimulation.StandbySetupUpdateTimestep </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>agents</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cfg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Function moves all agents tagged standby directly to a unique standby position as defined in config file.
-
-Parameters:
-agents: Group/List of all agents tagged with role standby.
-cfg: Config file dictionary.</pre> 
+setup_start:</pre> 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a86ae5bf8d1d8745fb50edb54ccd36baf" name="a86ae5bf8d1d8745fb50edb54ccd36baf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86ae5bf8d1d8745fb50edb54ccd36baf">&#9670;&nbsp;</a></span>agents</h2>
+<a id="a08687e6096fec289b13a8babc98bb683" name="a08687e6096fec289b13a8babc98bb683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08687e6096fec289b13a8babc98bb683">&#9670;&nbsp;</a></span>state</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -804,139 +804,7 @@ cfg: Config file dictionary.</pre>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">runSimulation.RunSimulation.agents = pygame.sprite.Group()</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac5a32509f06d0735db39ae036cdce9ac" name="ac5a32509f06d0735db39ae036cdce9ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5a32509f06d0735db39ae036cdce9ac">&#9670;&nbsp;</a></span>args</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">runSimulation.RunSimulation.args</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3eb8feda7b1da84195fcbb0ad25771d3" name="a3eb8feda7b1da84195fcbb0ad25771d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3eb8feda7b1da84195fcbb0ad25771d3">&#9670;&nbsp;</a></span>cfg</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">runSimulation.RunSimulation.cfg = json.load(json_file)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a122e99c584b2f7eefbd57e83e0e6d82c" name="a122e99c584b2f7eefbd57e83e0e6d82c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a122e99c584b2f7eefbd57e83e0e6d82c">&#9670;&nbsp;</a></span>config_name</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string runSimulation.RunSimulation.config_name = 'defaultConfig'</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9a5ca84e1190fea6a13e74fbd5f32fbe" name="a9a5ca84e1190fea6a13e74fbd5f32fbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a5ca84e1190fea6a13e74fbd5f32fbe">&#9670;&nbsp;</a></span>flock</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">runSimulation.RunSimulation.flock = pygame.sprite.Group()</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af450f493abfd95202b5f339a9c78734d" name="af450f493abfd95202b5f339a9c78734d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af450f493abfd95202b5f339a9c78734d">&#9670;&nbsp;</a></span>pack</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">runSimulation.RunSimulation.pack = pygame.sprite.Group()</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afb523f14a637ab0076482c39fce77722" name="afb523f14a637ab0076482c39fce77722"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb523f14a637ab0076482c39fce77722">&#9670;&nbsp;</a></span>pigs</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">runSimulation.RunSimulation.pigs = pygame.sprite.Group()</td>
+          <td class="memname">string runSimulation.RunSimulation.state = &quot;standby_setup_loop&quot;</td>
         </tr>
       </table>
   </td>
@@ -992,8 +860,8 @@ cfg: Config file dictionary.</pre>
 
 </div>
 </div>
-<a id="abefb60bd4db90c302d8dad4b376f3e21" name="abefb60bd4db90c302d8dad4b376f3e21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abefb60bd4db90c302d8dad4b376f3e21">&#9670;&nbsp;</a></span>simulationNode</h2>
+<a id="af450f493abfd95202b5f339a9c78734d" name="af450f493abfd95202b5f339a9c78734d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af450f493abfd95202b5f339a9c78734d">&#9670;&nbsp;</a></span>pack</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1002,7 +870,51 @@ cfg: Config file dictionary.</pre>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">runSimulation.RunSimulation.simulationNode = SimulationNode()</td>
+          <td class="memname">runSimulation.RunSimulation.pack = pygame.sprite.Group()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a5ca84e1190fea6a13e74fbd5f32fbe" name="a9a5ca84e1190fea6a13e74fbd5f32fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a5ca84e1190fea6a13e74fbd5f32fbe">&#9670;&nbsp;</a></span>flock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">runSimulation.RunSimulation.flock = pygame.sprite.Group()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb523f14a637ab0076482c39fce77722" name="afb523f14a637ab0076482c39fce77722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb523f14a637ab0076482c39fce77722">&#9670;&nbsp;</a></span>pigs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">runSimulation.RunSimulation.pigs = pygame.sprite.Group()</td>
         </tr>
       </table>
   </td>
@@ -1036,8 +948,8 @@ cfg: Config file dictionary.</pre>
 
 </div>
 </div>
-<a id="a08687e6096fec289b13a8babc98bb683" name="a08687e6096fec289b13a8babc98bb683"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08687e6096fec289b13a8babc98bb683">&#9670;&nbsp;</a></span>state</h2>
+<a id="a86ae5bf8d1d8745fb50edb54ccd36baf" name="a86ae5bf8d1d8745fb50edb54ccd36baf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ae5bf8d1d8745fb50edb54ccd36baf">&#9670;&nbsp;</a></span>agents</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1046,7 +958,95 @@ cfg: Config file dictionary.</pre>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string runSimulation.RunSimulation.state = &quot;standby_setup_loop&quot;</td>
+          <td class="memname">runSimulation.RunSimulation.agents = pygame.sprite.Group()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a122e99c584b2f7eefbd57e83e0e6d82c" name="a122e99c584b2f7eefbd57e83e0e6d82c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a122e99c584b2f7eefbd57e83e0e6d82c">&#9670;&nbsp;</a></span>config_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string runSimulation.RunSimulation.config_name = 'defaultConfig'</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5a32509f06d0735db39ae036cdce9ac" name="ac5a32509f06d0735db39ae036cdce9ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5a32509f06d0735db39ae036cdce9ac">&#9670;&nbsp;</a></span>args</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">runSimulation.RunSimulation.args</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abefb60bd4db90c302d8dad4b376f3e21" name="abefb60bd4db90c302d8dad4b376f3e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abefb60bd4db90c302d8dad4b376f3e21">&#9670;&nbsp;</a></span>simulationNode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">runSimulation.RunSimulation.simulationNode = SimulationNode()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3eb8feda7b1da84195fcbb0ad25771d3" name="a3eb8feda7b1da84195fcbb0ad25771d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb8feda7b1da84195fcbb0ad25771d3">&#9670;&nbsp;</a></span>cfg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">runSimulation.RunSimulation.cfg = json.load(json_file)</td>
         </tr>
       </table>
   </td>

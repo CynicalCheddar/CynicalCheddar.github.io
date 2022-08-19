@@ -1,5 +1,24 @@
 var searchData=
 [
-  ['text_5fobjects_0',['text_objects',['../class_agent_1_1_agent.html#a14d4daf54dcc117d228da225fe901784',1,'Agent::Agent']]],
-  ['transform_5fpos_1',['transform_pos',['../classtracking__aruco__markers_1_1_aruco_track.html#abf13d32ab1e475255b03ee5a01c92d24',1,'tracking_aruco_markers::ArucoTrack']]]
+  ['sequentialpathfindingstep_0',['SequentialPathfindingStep',['../class_pathfinding_manager_1_1_pathfinding_manager.html#a4e6bb24bb23e908a8a31a4d2357a1bfe',1,'PathfindingManager::PathfindingManager']]],
+  ['set_5fclosest_5fdog_1',['set_closest_dog',['../class_agent_1_1_agent.html#abe3932cf2aac49862c929f54d98c2201',1,'Agent::Agent']]],
+  ['set_5fz_5frotation_2',['set_z_rotation',['../class_pi_control__c.html#a8d309b5d2a41e47458c64aa340fdfb50',1,'PiControl_c']]],
+  ['setagentconfig_3',['SetAgentConfig',['../class_agent_1_1_agent.html#a6c5542453e3d6f98efcc7baa144700c3',1,'Agent::Agent']]],
+  ['setallagentrolestostandby_4',['SetAllAgentRolesToStandby',['../classrun_simulation_1_1_run_simulation.html#a04b38f04c860eebc75eaa6ee71e2fbeb',1,'runSimulation::RunSimulation']]],
+  ['setconfigcallback_5',['SetConfigCallback',['../classrun_simulation_1_1_run_simulation.html#ad0d59bea8a9ce1e87a9a47001cac122a',1,'runSimulation::RunSimulation']]],
+  ['setleftmotor_6',['setLeftMotor',['../class_pi_control__c.html#ab18314386fe5fa15e654af807fe93d34',1,'PiControl_c']]],
+  ['setpath_7',['SetPath',['../class_agent_1_1_agent.html#ac84d58e62fbb8e4974b6288da1bf4057',1,'Agent::Agent']]],
+  ['setrightmotor_8',['setRightMotor',['../class_pi_control__c.html#a215f791a184b7903475a645399e3a4a3',1,'PiControl_c']]],
+  ['setup_9',['setup',['../class_pi_control__c.html#a722de5335a55edd7b8e7023093e42477',1,'PiControl_c::setup()'],['../class_stack_control__c.html#a904466522a91d41edd9ea4eec334ac10',1,'StackControl_c::setup()']]],
+  ['setup_5frobot_10',['setup_robot',['../classrobot__server_1_1_server.html#ae2f25987a696882091ed95e415676cde',1,'robot_server::Server']]],
+  ['setupencoder0_11',['setupEncoder0',['../class_encoders__c.html#aa09d216ae20740fa2b44a766cde21662',1,'Encoders_c']]],
+  ['setupencoder1_12',['setupEncoder1',['../class_encoders__c.html#a655e28b0ab1578b6bd258c87d2330716',1,'Encoders_c']]],
+  ['shutdown_5fcallback_13',['shutdown_callback',['../classtracking__aruco__markers_1_1_aruco_track.html#a845da6263c16046daf32f0344b3ea33e',1,'tracking_aruco_markers::ArucoTrack']]],
+  ['simulationupdate_5fdog_14',['SimulationUpdate_Dog',['../class_agent_1_1_agent.html#a9635916c9b529d7714acad266f0a95b8',1,'Agent::Agent']]],
+  ['simulationupdate_5fsheep_15',['SimulationUpdate_Sheep',['../class_agent_1_1_agent.html#a4c9968a2f7db676f1d9f982268fd8bcf',1,'Agent::Agent']]],
+  ['sine_5fstep_16',['sine_step',['../class_agent_1_1_agent.html#a72969642a542fad6ae201d3d6c177d60',1,'Agent::Agent']]],
+  ['sortagentsbyrole_17',['SortAgentsByRole',['../classrun_simulation_1_1_run_simulation.html#aaa82ce8b8f4522fffbc2acae4cfdb144',1,'runSimulation::RunSimulation']]],
+  ['stackcontrol_5fc_18',['StackControl_c',['../class_stack_control__c.html#a463e6a62ace2c8bafc623aedfebf39f9',1,'StackControl_c']]],
+  ['standbysetuploopbutton_19',['standbySetupLoopButton',['../class_state_controller_1_1_state_controller.html#abd5bae0c9fa37f0c95a91181fefa8a28',1,'StateController::StateController']]],
+  ['standbysetupupdatetimestep_20',['StandbySetupUpdateTimestep',['../classrun_simulation_1_1_run_simulation.html#a5910d9b628e0ace642fd28f68d59407d',1,'runSimulation::RunSimulation']]]
 ];

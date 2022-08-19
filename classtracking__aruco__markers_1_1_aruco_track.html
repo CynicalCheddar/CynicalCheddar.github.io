@@ -200,42 +200,14 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="adabd24931af0392b3f170634101aa1e6" name="adabd24931af0392b3f170634101aa1e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adabd24931af0392b3f170634101aa1e6">&#9670;&nbsp;</a></span>added_robot_callback()</h2>
+<a id="a1cde7f20b5fb00e55692be84f03ae473" name="a1cde7f20b5fb00e55692be84f03ae473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cde7f20b5fb00e55692be84f03ae473">&#9670;&nbsp;</a></span>get_image()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def tracking_aruco_markers.ArucoTrack.added_robot_callback </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Int32&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1fdb513572141359225c545ac3f9a486" name="a1fdb513572141359225c545ac3f9a486"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fdb513572141359225c545ac3f9a486">&#9670;&nbsp;</a></span>calc_positions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def tracking_aruco_markers.ArucoTrack.calc_positions </td>
+          <td class="memname">def tracking_aruco_markers.ArucoTrack.get_image </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
@@ -243,10 +215,25 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Aim of function: take a list of circle centres from the circle detection, and then calculate their position in real space using
-the info we know about the position of the camera and its resolution and aperture angle etc.
 
-The estimation may require a fair amount of tuning</pre> 
+</div>
+</div>
+<a id="ac0d42e4e9663339522939276ac5ca34b" name="ac0d42e4e9663339522939276ac5ca34b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d42e4e9663339522939276ac5ca34b">&#9670;&nbsp;</a></span>detect_markers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tracking_aruco_markers.ArucoTrack.detect_markers </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="a4c8b4da3e6339bee369d7cf3f51d43d7" name="a4c8b4da3e6339bee369d7cf3f51d43d7"></a>
@@ -289,14 +276,70 @@ The estimation may require a fair amount of tuning</pre>
 
 </div>
 </div>
-<a id="a3f9b5f0f2648dec426a39f34eab4a4c8" name="a3f9b5f0f2648dec426a39f34eab4a4c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f9b5f0f2648dec426a39f34eab4a4c8">&#9670;&nbsp;</a></span>calibrate_cam_pos()</h2>
+<a id="adabd24931af0392b3f170634101aa1e6" name="adabd24931af0392b3f170634101aa1e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabd24931af0392b3f170634101aa1e6">&#9670;&nbsp;</a></span>added_robot_callback()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def tracking_aruco_markers.ArucoTrack.calibrate_cam_pos </td>
+          <td class="memname">def tracking_aruco_markers.ArucoTrack.added_robot_callback </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int32&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7afe60a305896e8d96e8e40f0ba5c92" name="aa7afe60a305896e8d96e8e40f0ba5c92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7afe60a305896e8d96e8e40f0ba5c92">&#9670;&nbsp;</a></span>removed_robot_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tracking_aruco_markers.ArucoTrack.removed_robot_callback </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int32&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fdb513572141359225c545ac3f9a486" name="a1fdb513572141359225c545ac3f9a486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fdb513572141359225c545ac3f9a486">&#9670;&nbsp;</a></span>calc_positions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tracking_aruco_markers.ArucoTrack.calc_positions </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
@@ -304,7 +347,28 @@ The estimation may require a fair amount of tuning</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Function to map coordinates to a 2D floor plan of the room by performing a transform from image to perfect image view</pre> 
+<pre class="fragment">Aim of function: take a list of circle centres from the circle detection, and then calculate their position in real space using
+the info we know about the position of the camera and its resolution and aperture angle etc.
+
+The estimation may require a fair amount of tuning</pre> 
+</div>
+</div>
+<a id="ac032f8b5a9bf2f303213bbe9aed03704" name="ac032f8b5a9bf2f303213bbe9aed03704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac032f8b5a9bf2f303213bbe9aed03704">&#9670;&nbsp;</a></span>publish_positions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tracking_aruco_markers.ArucoTrack.publish_positions </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Aim of function: Publish the positions of all markers to ROS topics.</pre> 
 </div>
 </div>
 <a id="a1c1e199d3bafdfb1de692ca8af6a8d0e" name="a1c1e199d3bafdfb1de692ca8af6a8d0e"></a>
@@ -336,14 +400,43 @@ The estimation may require a fair amount of tuning</pre>
 </pre> 
 </div>
 </div>
-<a id="ac0d42e4e9663339522939276ac5ca34b" name="ac0d42e4e9663339522939276ac5ca34b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0d42e4e9663339522939276ac5ca34b">&#9670;&nbsp;</a></span>detect_markers()</h2>
+<a id="a34026673980f69a8f6d38321e6468485" name="a34026673980f69a8f6d38321e6468485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34026673980f69a8f6d38321e6468485">&#9670;&nbsp;</a></span>remove_robot()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def tracking_aruco_markers.ArucoTrack.detect_markers </td>
+          <td class="memname">def tracking_aruco_markers.ArucoTrack.remove_robot </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">As the Aruco gives an ID number, a dictionary containing all the publishing objects is created, with each robots publisher as the key
+</pre> 
+</div>
+</div>
+<a id="a845da6263c16046daf32f0344b3ea33e" name="a845da6263c16046daf32f0344b3ea33e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845da6263c16046daf32f0344b3ea33e">&#9670;&nbsp;</a></span>shutdown_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def tracking_aruco_markers.ArucoTrack.shutdown_callback </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
@@ -351,25 +444,7 @@ The estimation may require a fair amount of tuning</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1cde7f20b5fb00e55692be84f03ae473" name="a1cde7f20b5fb00e55692be84f03ae473"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cde7f20b5fb00e55692be84f03ae473">&#9670;&nbsp;</a></span>get_image()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def tracking_aruco_markers.ArucoTrack.get_image </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
+<pre class="fragment">Shuts down server</pre> 
 </div>
 </div>
 <a id="a731f34da075004a76557f3815a44c45b" name="a731f34da075004a76557f3815a44c45b"></a>
@@ -400,14 +475,14 @@ The estimation may require a fair amount of tuning</pre>
 <pre class="fragment">Sets origin of coordinate reference frame</pre> 
 </div>
 </div>
-<a id="ac032f8b5a9bf2f303213bbe9aed03704" name="ac032f8b5a9bf2f303213bbe9aed03704"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac032f8b5a9bf2f303213bbe9aed03704">&#9670;&nbsp;</a></span>publish_positions()</h2>
+<a id="a3f9b5f0f2648dec426a39f34eab4a4c8" name="a3f9b5f0f2648dec426a39f34eab4a4c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f9b5f0f2648dec426a39f34eab4a4c8">&#9670;&nbsp;</a></span>calibrate_cam_pos()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def tracking_aruco_markers.ArucoTrack.publish_positions </td>
+          <td class="memname">def tracking_aruco_markers.ArucoTrack.calibrate_cam_pos </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
@@ -415,82 +490,7 @@ The estimation may require a fair amount of tuning</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Aim of function: Publish the positions of all markers to ROS topics.</pre> 
-</div>
-</div>
-<a id="a34026673980f69a8f6d38321e6468485" name="a34026673980f69a8f6d38321e6468485"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34026673980f69a8f6d38321e6468485">&#9670;&nbsp;</a></span>remove_robot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def tracking_aruco_markers.ArucoTrack.remove_robot </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ID</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">As the Aruco gives an ID number, a dictionary containing all the publishing objects is created, with each robots publisher as the key
-</pre> 
-</div>
-</div>
-<a id="aa7afe60a305896e8d96e8e40f0ba5c92" name="aa7afe60a305896e8d96e8e40f0ba5c92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7afe60a305896e8d96e8e40f0ba5c92">&#9670;&nbsp;</a></span>removed_robot_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def tracking_aruco_markers.ArucoTrack.removed_robot_callback </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Int32&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a845da6263c16046daf32f0344b3ea33e" name="a845da6263c16046daf32f0344b3ea33e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a845da6263c16046daf32f0344b3ea33e">&#9670;&nbsp;</a></span>shutdown_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def tracking_aruco_markers.ArucoTrack.shutdown_callback </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Shuts down server</pre> 
+<pre class="fragment">Function to map coordinates to a 2D floor plan of the room by performing a transform from image to perfect image view</pre> 
 </div>
 </div>
 <a id="abf13d32ab1e475255b03ee5a01c92d24" name="abf13d32ab1e475255b03ee5a01c92d24"></a>
@@ -513,128 +513,24 @@ middles are screen coordinates of ArUco markers.</pre>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a48f27575124b57bda7668092919779a7" name="a48f27575124b57bda7668092919779a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48f27575124b57bda7668092919779a7">&#9670;&nbsp;</a></span>active_ids</h2>
+<a id="a44dfa2fa9459b106f266459cacc8d19e" name="a44dfa2fa9459b106f266459cacc8d19e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44dfa2fa9459b106f266459cacc8d19e">&#9670;&nbsp;</a></span>Vector3</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.active_ids</td>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.Vector3</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3fbe86850fc164043933f75b246aedec" name="a3fbe86850fc164043933f75b246aedec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fbe86850fc164043933f75b246aedec">&#9670;&nbsp;</a></span>active_robots</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.active_robots</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab41dec1b1841aa8caabb87823eb3bbdc" name="ab41dec1b1841aa8caabb87823eb3bbdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab41dec1b1841aa8caabb87823eb3bbdc">&#9670;&nbsp;</a></span>added_robot_subscriber</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.added_robot_subscriber</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a83621f1f01c7c710a1dbd2ca9815dfdc" name="a83621f1f01c7c710a1dbd2ca9815dfdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83621f1f01c7c710a1dbd2ca9815dfdc">&#9670;&nbsp;</a></span>aruco_dict</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.aruco_dict</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a388c86e74664e9a66f1e3f0eb518e22f" name="a388c86e74664e9a66f1e3f0eb518e22f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a388c86e74664e9a66f1e3f0eb518e22f">&#9670;&nbsp;</a></span>cam</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.cam</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2df639510517fd1def730987bd98b3fd" name="a2df639510517fd1def730987bd98b3fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2df639510517fd1def730987bd98b3fd">&#9670;&nbsp;</a></span>centres_list</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.centres_list</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa54a2f22731f68ef7d1cac472e436a67" name="aa54a2f22731f68ef7d1cac472e436a67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa54a2f22731f68ef7d1cac472e436a67">&#9670;&nbsp;</a></span>frame</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.frame</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a96ad70391035a38689064196c2b10f61" name="a96ad70391035a38689064196c2b10f61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96ad70391035a38689064196c2b10f61">&#9670;&nbsp;</a></span>frame_markers</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.frame_markers</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa081f2ab20b2b74c60123bba0e39a9b5" name="aa081f2ab20b2b74c60123bba0e39a9b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa081f2ab20b2b74c60123bba0e39a9b5">&#9670;&nbsp;</a></span>grey</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.grey</td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -647,6 +543,20 @@ middles are screen coordinates of ArUco markers.</pre>
       <table class="memname">
         <tr>
           <td class="memname">tracking_aruco_markers.ArucoTrack.logger</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac057c5c5e1ba8f80a45e5867c344809b" name="ac057c5c5e1ba8f80a45e5867c344809b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac057c5c5e1ba8f80a45e5867c344809b">&#9670;&nbsp;</a></span>pub_dict</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.pub_dict</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -681,42 +591,28 @@ middles are screen coordinates of ArUco markers.</pre>
 
 </div>
 </div>
-<a id="a6079335d91c8869ef156a7a36e9bb656" name="a6079335d91c8869ef156a7a36e9bb656"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6079335d91c8869ef156a7a36e9bb656">&#9670;&nbsp;</a></span>middles_on_floor</h2>
+<a id="a388c86e74664e9a66f1e3f0eb518e22f" name="a388c86e74664e9a66f1e3f0eb518e22f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388c86e74664e9a66f1e3f0eb518e22f">&#9670;&nbsp;</a></span>cam</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.middles_on_floor</td>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.cam</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a9ecde902a418fe95ee63084850bc4357" name="a9ecde902a418fe95ee63084850bc4357"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ecde902a418fe95ee63084850bc4357">&#9670;&nbsp;</a></span>origin</h2>
+<a id="a83621f1f01c7c710a1dbd2ca9815dfdc" name="a83621f1f01c7c710a1dbd2ca9815dfdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83621f1f01c7c710a1dbd2ca9815dfdc">&#9670;&nbsp;</a></span>aruco_dict</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.origin</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac5887d3f6335088657ac57174fb3cd82" name="ac5887d3f6335088657ac57174fb3cd82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5887d3f6335088657ac57174fb3cd82">&#9670;&nbsp;</a></span>origin_subscriber</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.origin_subscriber</td>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.aruco_dict</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -737,14 +633,28 @@ middles are screen coordinates of ArUco markers.</pre>
 
 </div>
 </div>
-<a id="ac057c5c5e1ba8f80a45e5867c344809b" name="ac057c5c5e1ba8f80a45e5867c344809b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac057c5c5e1ba8f80a45e5867c344809b">&#9670;&nbsp;</a></span>pub_dict</h2>
+<a id="a3fbe86850fc164043933f75b246aedec" name="a3fbe86850fc164043933f75b246aedec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fbe86850fc164043933f75b246aedec">&#9670;&nbsp;</a></span>active_robots</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.pub_dict</td>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.active_robots</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab41dec1b1841aa8caabb87823eb3bbdc" name="ab41dec1b1841aa8caabb87823eb3bbdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab41dec1b1841aa8caabb87823eb3bbdc">&#9670;&nbsp;</a></span>added_robot_subscriber</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.added_robot_subscriber</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -765,24 +675,86 @@ middles are screen coordinates of ArUco markers.</pre>
 
 </div>
 </div>
-<a id="a44dfa2fa9459b106f266459cacc8d19e" name="a44dfa2fa9459b106f266459cacc8d19e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44dfa2fa9459b106f266459cacc8d19e">&#9670;&nbsp;</a></span>Vector3</h2>
+<a id="ac5887d3f6335088657ac57174fb3cd82" name="ac5887d3f6335088657ac57174fb3cd82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5887d3f6335088657ac57174fb3cd82">&#9670;&nbsp;</a></span>origin_subscriber</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">tracking_aruco_markers.ArucoTrack.Vector3</td>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.origin_subscriber</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa54a2f22731f68ef7d1cac472e436a67" name="aa54a2f22731f68ef7d1cac472e436a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa54a2f22731f68ef7d1cac472e436a67">&#9670;&nbsp;</a></span>frame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.frame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa081f2ab20b2b74c60123bba0e39a9b5" name="aa081f2ab20b2b74c60123bba0e39a9b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa081f2ab20b2b74c60123bba0e39a9b5">&#9670;&nbsp;</a></span>grey</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.grey</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96ad70391035a38689064196c2b10f61" name="a96ad70391035a38689064196c2b10f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ad70391035a38689064196c2b10f61">&#9670;&nbsp;</a></span>frame_markers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.frame_markers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2df639510517fd1def730987bd98b3fd" name="a2df639510517fd1def730987bd98b3fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df639510517fd1def730987bd98b3fd">&#9670;&nbsp;</a></span>centres_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.centres_list</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48f27575124b57bda7668092919779a7" name="a48f27575124b57bda7668092919779a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f27575124b57bda7668092919779a7">&#9670;&nbsp;</a></span>active_ids</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.active_ids</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -795,6 +767,34 @@ middles are screen coordinates of ArUco markers.</pre>
       <table class="memname">
         <tr>
           <td class="memname">tracking_aruco_markers.ArucoTrack.vectors_to_robots</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ecde902a418fe95ee63084850bc4357" name="a9ecde902a418fe95ee63084850bc4357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ecde902a418fe95ee63084850bc4357">&#9670;&nbsp;</a></span>origin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.origin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6079335d91c8869ef156a7a36e9bb656" name="a6079335d91c8869ef156a7a36e9bb656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6079335d91c8869ef156a7a36e9bb656">&#9670;&nbsp;</a></span>middles_on_floor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tracking_aruco_markers.ArucoTrack.middles_on_floor</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['empty_5fsub_5fflock_0',['empty_sub_flock',['../class_agent_1_1_agent.html#a29a0fc215676d3e117abcd1b9bb44c32',1,'Agent::Agent']]],
-  ['enablekinematics_1',['enableKinematics',['../class_kinematics__c.html#a5b7b4c0a7eef0f2a8462d4fde5adb5c6',1,'Kinematics_c']]],
-  ['error_2',['error',['../classros__logger_1_1_ros_logger.html#aa0a93a18515acc26ae21d3016a4d6dee',1,'ros_logger::RosLogger']]],
-  ['experimentupdatetimestep_3',['ExperimentUpdateTimestep',['../classrun_simulation_1_1_run_simulation.html#a3d2132293cfdee585272efdbe1a696b2',1,'runSimulation::RunSimulation']]]
+  ['delete_0',['delete',['../class_agent_1_1_agent.html#ad79042875e817192ec9b82ca35b7f69e',1,'Agent::Agent']]],
+  ['detect_5fmarkers_1',['detect_markers',['../classtracking__aruco__markers_1_1_aruco_track.html#ac0d42e4e9663339522939276ac5ca34b',1,'tracking_aruco_markers::ArucoTrack']]],
+  ['dispatchcallback_2',['DispatchCallback',['../classrun_simulation_1_1_run_simulation.html#ac40796399406f864e099f5ed19f9d4c9',1,'runSimulation::RunSimulation']]],
+  ['drawmarker_3',['drawMarker',['../class_stack_control__c.html#a1a062f81b175431abcc63c7952a1607f',1,'StackControl_c']]],
+  ['drawself_4',['DrawSelf',['../class_agent_1_1_agent.html#a9ec6ed76b0d97491bf20b4df0df0d334',1,'Agent::Agent']]],
+  ['drawworld_5',['DrawWorld',['../classrun_simulation_1_1_run_simulation.html#a50b53bbdd6e6563109d7ba62f8254696',1,'runSimulation::RunSimulation']]]
 ];

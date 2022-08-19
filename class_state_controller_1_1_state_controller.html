@@ -170,129 +170,6 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8fe4c939e1b4074996f746b7e2ec4880" name="a8fe4c939e1b4074996f746b7e2ec4880"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fe4c939e1b4074996f746b7e2ec4880">&#9670;&nbsp;</a></span>clickAddAgentButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def StateController.StateController.clickAddAgentButton </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment"> Publishes Int32 of the id of a new agent to add to the simulation in runSimulation.py.
-
-This method should only be called if the simulation is being run locally:
-In such a case, cfg['event_driven'] should be false in the config file
-
-Int32 is in format std_msgs.msg.Int32 </pre> 
-</div>
-</div>
-<a id="a7e9faca6ce7c9d001d032005c8177d00" name="a7e9faca6ce7c9d001d032005c8177d00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e9faca6ce7c9d001d032005c8177d00">&#9670;&nbsp;</a></span>clickDispatchButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def StateController.StateController.clickDispatchButton </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment"> Publishes string of the command 'dispatch' to tell the simulation to dispatch a standby agent and transform it into a dog agent.
-
-String is in format std_msgs.msg.String </pre> 
-</div>
-</div>
-<a id="a4fd46c7a90c8df7c552610c766590d54" name="a4fd46c7a90c8df7c552610c766590d54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fd46c7a90c8df7c552610c766590d54">&#9670;&nbsp;</a></span>clickDogSetupLoopButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def StateController.StateController.clickDogSetupLoopButton </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment"> Publishes string of the command 'dog_setup_start' to change the state of state machine in runSimulation main loop
-
-String is in format std_msgs.msg.String </pre> 
-</div>
-</div>
-<a id="afc0a2598eed57032e755e15ffdc5745b" name="afc0a2598eed57032e755e15ffdc5745b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc0a2598eed57032e755e15ffdc5745b">&#9670;&nbsp;</a></span>clickExperimentButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def StateController.StateController.clickExperimentButton </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment"> Publishes string of the command 'experiment' to change the state of state machine in runSimulation main loop
-
-String is in format std_msgs.msg.String </pre> 
-</div>
-</div>
-<a id="abae00a5457ba941041151cbf064f072a" name="abae00a5457ba941041151cbf064f072a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abae00a5457ba941041151cbf064f072a">&#9670;&nbsp;</a></span>clickPigSetupLoopButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def StateController.StateController.clickPigSetupLoopButton </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment"> Publishes string of the command 'pig_setup_start' to change the state of state machine in runSimulation main loop
-
-String is in format std_msgs.msg.String </pre> 
-</div>
-</div>
-<a id="af38910164bdc50cd83193c5e163b7c26" name="af38910164bdc50cd83193c5e163b7c26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af38910164bdc50cd83193c5e163b7c26">&#9670;&nbsp;</a></span>clickRecallButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def StateController.StateController.clickRecallButton </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment"> Publishes string of the command 'recall' to tell the simulation to recall a dog agent and transform it into a standby agent.
-
-String is in format std_msgs.msg.String </pre> 
-</div>
-</div>
 <a id="a8fb1d8e38d964d274f37b45581c1483c" name="a8fb1d8e38d964d274f37b45581c1483c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fb1d8e38d964d274f37b45581c1483c">&#9670;&nbsp;</a></span>clickSendNewJsonButton()</h2>
 
@@ -309,26 +186,6 @@ String is in format std_msgs.msg.String </pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment"> Publishes string of the name of a json config file to ROS topic /controller/config
-
-String is in format std_msgs.msg.String </pre> 
-</div>
-</div>
-<a id="a2878744e19b8412fd4298d9cca585c3a" name="a2878744e19b8412fd4298d9cca585c3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2878744e19b8412fd4298d9cca585c3a">&#9670;&nbsp;</a></span>clickSetupStartButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def StateController.StateController.clickSetupStartButton </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment"> Publishes string of the command 'setup_start' to change the state of state machine in runSimulation main loop
 
 String is in format std_msgs.msg.String </pre> 
 </div>
@@ -353,6 +210,89 @@ String is in format std_msgs.msg.String </pre>
 String is in format std_msgs.msg.String </pre> 
 </div>
 </div>
+<a id="a2878744e19b8412fd4298d9cca585c3a" name="a2878744e19b8412fd4298d9cca585c3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2878744e19b8412fd4298d9cca585c3a">&#9670;&nbsp;</a></span>clickSetupStartButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def StateController.StateController.clickSetupStartButton </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment"> Publishes string of the command 'setup_start' to change the state of state machine in runSimulation main loop
+
+String is in format std_msgs.msg.String </pre> 
+</div>
+</div>
+<a id="a8fe4c939e1b4074996f746b7e2ec4880" name="a8fe4c939e1b4074996f746b7e2ec4880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe4c939e1b4074996f746b7e2ec4880">&#9670;&nbsp;</a></span>clickAddAgentButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def StateController.StateController.clickAddAgentButton </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment"> Publishes Int32 of the id of a new agent to add to the simulation in runSimulation.py.
+
+This method should only be called if the simulation is being run locally:
+In such a case, cfg['event_driven'] should be false in the config file
+
+Int32 is in format std_msgs.msg.Int32 </pre> 
+</div>
+</div>
+<a id="a4fd46c7a90c8df7c552610c766590d54" name="a4fd46c7a90c8df7c552610c766590d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fd46c7a90c8df7c552610c766590d54">&#9670;&nbsp;</a></span>clickDogSetupLoopButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def StateController.StateController.clickDogSetupLoopButton </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment"> Publishes string of the command 'dog_setup_start' to change the state of state machine in runSimulation main loop
+
+String is in format std_msgs.msg.String </pre> 
+</div>
+</div>
+<a id="abae00a5457ba941041151cbf064f072a" name="abae00a5457ba941041151cbf064f072a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abae00a5457ba941041151cbf064f072a">&#9670;&nbsp;</a></span>clickPigSetupLoopButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def StateController.StateController.clickPigSetupLoopButton </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment"> Publishes string of the command 'pig_setup_start' to change the state of state machine in runSimulation main loop
+
+String is in format std_msgs.msg.String </pre> 
+</div>
+</div>
 <a id="abd5bae0c9fa37f0c95a91181fefa8a28" name="abd5bae0c9fa37f0c95a91181fefa8a28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd5bae0c9fa37f0c95a91181fefa8a28">&#9670;&nbsp;</a></span>standbySetupLoopButton()</h2>
 
@@ -373,21 +313,67 @@ String is in format std_msgs.msg.String </pre>
 String is in format std_msgs.msg.String </pre> 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="af20b8325b3bfae72b9c0612f071923fc" name="af20b8325b3bfae72b9c0612f071923fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af20b8325b3bfae72b9c0612f071923fc">&#9670;&nbsp;</a></span>agentPublisher</h2>
+<a id="afc0a2598eed57032e755e15ffdc5745b" name="afc0a2598eed57032e755e15ffdc5745b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc0a2598eed57032e755e15ffdc5745b">&#9670;&nbsp;</a></span>clickExperimentButton()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">StateController.StateController.agentPublisher</td>
+          <td class="memname">def StateController.StateController.clickExperimentButton </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment"> Publishes string of the command 'experiment' to change the state of state machine in runSimulation main loop
 
+String is in format std_msgs.msg.String </pre> 
 </div>
 </div>
+<a id="a7e9faca6ce7c9d001d032005c8177d00" name="a7e9faca6ce7c9d001d032005c8177d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e9faca6ce7c9d001d032005c8177d00">&#9670;&nbsp;</a></span>clickDispatchButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def StateController.StateController.clickDispatchButton </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment"> Publishes string of the command 'dispatch' to tell the simulation to dispatch a standby agent and transform it into a dog agent.
+
+String is in format std_msgs.msg.String </pre> 
+</div>
+</div>
+<a id="af38910164bdc50cd83193c5e163b7c26" name="af38910164bdc50cd83193c5e163b7c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af38910164bdc50cd83193c5e163b7c26">&#9670;&nbsp;</a></span>clickRecallButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def StateController.StateController.clickRecallButton </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment"> Publishes string of the command 'recall' to tell the simulation to recall a dog agent and transform it into a standby agent.
+
+String is in format std_msgs.msg.String </pre> 
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="af202bc7cdcef65d233b54ea26225da3c" name="af202bc7cdcef65d233b54ea26225da3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af202bc7cdcef65d233b54ea26225da3c">&#9670;&nbsp;</a></span>args</h2>
 
@@ -410,48 +396,6 @@ String is in format std_msgs.msg.String </pre>
 
 </div>
 </div>
-<a id="a7793c54e0353ca07abd47638d7fed8cd" name="a7793c54e0353ca07abd47638d7fed8cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7793c54e0353ca07abd47638d7fed8cd">&#9670;&nbsp;</a></span>dispatchPublisher</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">StateController.StateController.dispatchPublisher</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a95e02ed05478aff685f75bba0a471351" name="a95e02ed05478aff685f75bba0a471351"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95e02ed05478aff685f75bba0a471351">&#9670;&nbsp;</a></span>i</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">StateController.StateController.i</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9eab513ae7c0740246cbe6006a8f592c" name="a9eab513ae7c0740246cbe6006a8f592c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9eab513ae7c0740246cbe6006a8f592c">&#9670;&nbsp;</a></span>jsonPublisher</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">StateController.StateController.jsonPublisher</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="af7594df5ff3d41cb03ccc9a877b5168b" name="af7594df5ff3d41cb03ccc9a877b5168b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af7594df5ff3d41cb03ccc9a877b5168b">&#9670;&nbsp;</a></span>master</h2>
 
@@ -460,6 +404,20 @@ String is in format std_msgs.msg.String </pre>
       <table class="memname">
         <tr>
           <td class="memname">StateController.StateController.master</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e6521c72181fcee87658459dd26435d" name="a5e6521c72181fcee87658459dd26435d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e6521c72181fcee87658459dd26435d">&#9670;&nbsp;</a></span>T</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StateController.StateController.T</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -480,14 +438,56 @@ String is in format std_msgs.msg.String </pre>
 
 </div>
 </div>
-<a id="a5e6521c72181fcee87658459dd26435d" name="a5e6521c72181fcee87658459dd26435d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e6521c72181fcee87658459dd26435d">&#9670;&nbsp;</a></span>T</h2>
+<a id="a7793c54e0353ca07abd47638d7fed8cd" name="a7793c54e0353ca07abd47638d7fed8cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7793c54e0353ca07abd47638d7fed8cd">&#9670;&nbsp;</a></span>dispatchPublisher</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">StateController.StateController.T</td>
+          <td class="memname">StateController.StateController.dispatchPublisher</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af20b8325b3bfae72b9c0612f071923fc" name="af20b8325b3bfae72b9c0612f071923fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af20b8325b3bfae72b9c0612f071923fc">&#9670;&nbsp;</a></span>agentPublisher</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StateController.StateController.agentPublisher</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9eab513ae7c0740246cbe6006a8f592c" name="a9eab513ae7c0740246cbe6006a8f592c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eab513ae7c0740246cbe6006a8f592c">&#9670;&nbsp;</a></span>jsonPublisher</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StateController.StateController.jsonPublisher</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95e02ed05478aff685f75bba0a471351" name="a95e02ed05478aff685f75bba0a471351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e02ed05478aff685f75bba0a471351">&#9670;&nbsp;</a></span>i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StateController.StateController.i</td>
         </tr>
       </table>
 </div><div class="memdoc">

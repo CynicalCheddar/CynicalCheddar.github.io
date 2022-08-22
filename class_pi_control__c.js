@@ -2,7 +2,6 @@ var class_pi_control__c =
 [
     [ "i2c_status", "struct_pi_control__c_1_1i2c__status.html", "struct_pi_control__c_1_1i2c__status" ],
     [ "i2c_status_t", "class_pi_control__c.html#a30277ebcb6d1c7478c40b032479c0443", null ],
-    [ "PiControl_c", "class_pi_control__c.html#a15a73339aa805e1074905c3d2ee467c7", null ],
     [ "setLeftMotor", "class_pi_control__c.html#ab18314386fe5fa15e654af807fe93d34", null ],
     [ "setRightMotor", "class_pi_control__c.html#a215f791a184b7903475a645399e3a4a3", null ],
     [ "i2c_sendStatus", "class_pi_control__c.html#a2bf75639dd312db94b64ce32215ec64e", null ],
@@ -13,20 +12,5 @@ var class_pi_control__c =
     [ "go_forward", "class_pi_control__c.html#ac1189bfbbf01f54b6e0642246bcf08e3", null ],
     [ "between_pi", "class_pi_control__c.html#a9b581f6e1e11b1c0dfa1b3fe50514184", null ],
     [ "loop", "class_pi_control__c.html#a0adfbf0413f0b1614db8a250898420b0", null ],
-    [ "printRXStatus", "class_pi_control__c.html#a4238fc14079747549c5af6484e32e92a", null ],
-    [ "kinematics", "class_pi_control__c.html#a52322536c41ad0cb8dcde011221f5fe4", null ],
-    [ "turnDirection", "class_pi_control__c.html#acd6b2eb984625f77f1eb9361840ad111", null ],
-    [ "speed", "class_pi_control__c.html#a599fbfee3847743ca48a1aa754de2370", null ],
-    [ "force_x", "class_pi_control__c.html#a6854a37607c2c16246240ff093c04438", null ],
-    [ "force_y", "class_pi_control__c.html#a00e72b948b8eb6aa78ae18675cd2803a", null ],
-    [ "goal", "class_pi_control__c.html#a64c19f41068c544759aaa75cb20c1ef4", null ],
-    [ "position_uncertainty", "class_pi_control__c.html#a62e1c197dc4def0f0dff0af272927bc4", null ],
-    [ "rotation_uncertainty", "class_pi_control__c.html#a984018ca43790a55d7278d7d2663d708", null ],
-    [ "leftVel", "class_pi_control__c.html#a4a4dfd8cd4ecc6d32e87af8af845c752", null ],
-    [ "rightVel", "class_pi_control__c.html#ad9c3fda1961e92f0f0c816cff79e9904", null ],
-    [ "i2c_status_tx", "class_pi_control__c.html#aa07194a13e8334aa7dc8108a07b22a1c", null ],
-    [ "i2c_status_rx", "class_pi_control__c.html#a7f5043662b327e51b9d7c71d68eb3d20", null ],
-    [ "battery_millivolts", "class_pi_control__c.html#ac1aa4a365bce68987e68df4786c6c173", null ],
-    [ "batteryTS", "class_pi_control__c.html#acaf3dfb4de04249be26bdee29c31daaf", null ],
-    [ "currentTS", "class_pi_control__c.html#a336cb7bb73ea5948a4030d0ee7c9cf33", null ]
+    [ "printRXStatus", "class_pi_control__c.html#a4238fc14079747549c5af6484e32e92a", null ]
 ];

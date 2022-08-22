@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['active_5fids_0',['active_ids',['../classtracking__aruco__markers_1_1_aruco_track.html#a48f27575124b57bda7668092919779a7',1,'tracking_aruco_markers::ArucoTrack']]],
-  ['active_5frobots_1',['active_robots',['../classtracking__aruco__markers_1_1_aruco_track.html#a3fbe86850fc164043933f75b246aedec',1,'tracking_aruco_markers::ArucoTrack']]],
-  ['added_5frobot_5fpublisher_2',['added_robot_publisher',['../classrobot__server_1_1_server.html#a8a918d27ca56743b0be13baf69c3e79b',1,'robot_server::Server']]],
-  ['added_5frobot_5fsubscriber_3',['added_robot_subscriber',['../classtracking__aruco__markers_1_1_aruco_track.html#ab41dec1b1841aa8caabb87823eb3bbdc',1,'tracking_aruco_markers::ArucoTrack']]],
-  ['agentpublisher_4',['agentPublisher',['../class_state_controller_1_1_state_controller.html#af20b8325b3bfae72b9c0612f071923fc',1,'StateController::StateController']]],
-  ['agents_5',['agents',['../classrun_simulation_1_1_run_simulation.html#a86ae5bf8d1d8745fb50edb54ccd36baf',1,'runSimulation::RunSimulation']]],
-  ['alive_6',['alive',['../classrobot__server_1_1_robot.html#a2d4a68cc53d3b79d98ac95df81401bd5',1,'robot_server::Robot']]],
-  ['allocator_7',['allocator',['../class_stack_control__c.html#ac0a9cd914169f9cc0c6a9db6cbe2863f',1,'StackControl_c']]],
-  ['app_8',['app',['../namespace_state_controller.html#af8f83a27e65d586d94dc0e3e5fbd8b5c',1,'StateController']]],
-  ['args_9',['args',['../classrun_simulation_1_1_run_simulation.html#ac5a32509f06d0735db39ae036cdce9ac',1,'runSimulation.RunSimulation.args()'],['../class_state_controller_1_1_state_controller.html#af202bc7cdcef65d233b54ea26225da3c',1,'StateController.StateController.args()']]],
-  ['aruco_5fdict_10',['aruco_dict',['../classtracking__aruco__markers_1_1_aruco_track.html#a83621f1f01c7c710a1dbd2ca9815dfdc',1,'tracking_aruco_markers.ArucoTrack.aruco_dict()'],['../namespacemarker__maker.html#a041eb0c5ef9e497495c297a227aa9ce4',1,'marker_maker.aruco_dict()']]]
+  ['count_5fdifference_5fleft_0',['count_difference_left',['../class_kinematics__c.html#aab851d96692a23575ecd6fa92bc91855',1,'Kinematics_c']]],
+  ['count_5fdifference_5fright_1',['count_difference_right',['../class_kinematics__c.html#acb7d3972e9b43d8c456c08cf9df5bf84',1,'Kinematics_c']]],
+  ['count_5fwheel_5fleft_2',['count_wheel_left',['../class_kinematics__c.html#a6c904a45d0816331fd2a5ceab5c2a019',1,'Kinematics_c']]],
+  ['count_5fwheel_5fleft_5ftemp_3',['count_wheel_left_temp',['../class_kinematics__c.html#a164d5a49abe32ff28fe69a30c0d1e9c1',1,'Kinematics_c']]],
+  ['count_5fwheel_5fright_4',['count_wheel_right',['../class_kinematics__c.html#a04b808bb2cb0e19d5030075d257e4adb',1,'Kinematics_c']]],
+  ['count_5fwheel_5fright_5ftemp_5',['count_wheel_right_temp',['../class_kinematics__c.html#ab4245f587211d1cfeabc6c16a83732ad',1,'Kinematics_c']]]
 ];

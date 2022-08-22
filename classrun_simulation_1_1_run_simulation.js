@@ -15,8 +15,6 @@ var classrun_simulation_1_1_run_simulation =
     [ "StandbySetupUpdateTimestep", "classrun_simulation_1_1_run_simulation.html#a5910d9b628e0ace642fd28f68d59407d", null ],
     [ "SetAllAgentRolesToStandby", "classrun_simulation_1_1_run_simulation.html#a04b38f04c860eebc75eaa6ee71e2fbeb", null ],
     [ "SortAgentsByRole", "classrun_simulation_1_1_run_simulation.html#aaa82ce8b8f4522fffbc2acae4cfdb144", null ],
-    [ "isInRectangle", "classrun_simulation_1_1_run_simulation.html#a107ddba56ae57eb07950adde48b1436e", null ],
-    [ "isPointInCircle", "classrun_simulation_1_1_run_simulation.html#a9e84a57cd9824e53627d72ce627135f4", null ],
     [ "RemoveAgent", "classrun_simulation_1_1_run_simulation.html#a5bb17d17b726709e6391f233ead4064f", null ],
     [ "RemoveAgentCallback", "classrun_simulation_1_1_run_simulation.html#aec3bb54d3932f1e23360b0c6718cff68", null ],
     [ "main", "classrun_simulation_1_1_run_simulation.html#af8d55bee936941b6c61e78fa2c4c5bcb", null ]

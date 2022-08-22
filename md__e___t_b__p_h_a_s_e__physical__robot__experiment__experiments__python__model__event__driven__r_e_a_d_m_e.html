@@ -85,24 +85,24 @@ $(document).ready(function(){initNavTree('md__e___t_b__p_h_a_s_e__physical__robo
   <div class="headertitle"><div class="title">Simulation Machine Code User Guide </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md3"></a>
 runSimulation</h1>
 <p >The central hub for all the code for running the robot control simulation. Works alongside all other files in the 'Experiments/Python Model Event Driven' directory. All agents are simulated in this script. Agents are added and removed with commands from the robot server via ROS. Real world robots are avatars of these agents.</p>
-<p >The <a class="el" href="namespacerun_simulation.html">runSimulation</a> agent control framework is a state machine. The user is able to change the state of the state machine via the <a class="el" href="_state_controller_8py.html">StateController.py</a> user interface, or by sending the appropriate commands to the appropriate ROS topics.</p>
+<p >The <a class="el" href="namespacerun_simulation.html">runSimulation</a> agent control framework is a state machine. The user is able to change the state of the state machine via the StateController.py user interface, or by sending the appropriate commands to the appropriate ROS topics.</p>
 <p ><a class="el" href="namespacerun_simulation.html">runSimulation</a> loads a default json configuration file to describe the parameters for each experiment trial. The config file is loaded upon initialisation and defines a behaviours such as agent repulsion forces, simulation space dimensions, and whether a local or real world simulation should be run.</p>
 <p >TO USE:</p>
-<p >Run '<a class="el" href="run_simulation_8py.html">runSimulation.py</a>' by command line with the python interpreter on a linux system.</p>
+<p >Run 'runSimulation.py' by command line with the python interpreter on a linux system.</p>
 <pre class="fragment">'python3 runSimulation.py'
-</pre><p> Now launch '<a class="el" href="_state_controller_8py.html">StateController.py</a>' from another terminal.</p>
+</pre><p> Now launch 'StateController.py' from another terminal.</p>
 <pre class="fragment">'python3 StateController.py'
-</pre> <h1><a class="anchor" id="autotoc_md2"></a>
+</pre> <h1><a class="anchor" id="autotoc_md4"></a>
 StateController</h1>
 <p >The User Interface for setting the state machine's state in <a class="el" href="namespacerun_simulation.html">runSimulation</a>, as well as sending commands.</p>
-<p >In <a class="el" href="namespace_state_controller.html">StateController</a>, the user is able to iterate through all trial setup steps - sending agents (and by extension physical robots) to their startup positions defined in the current configuration file.</p>
+<p >In StateController, the user is able to iterate through all trial setup steps - sending agents (and by extension physical robots) to their startup positions defined in the current configuration file.</p>
 <p >The user is able to set all active agents to standby, as well as change the current configuration file.</p>
 <p >TO USE:</p>
-<p >Run '<a class="el" href="run_simulation_8py.html">runSimulation.py</a>' by command line with the python interpreter on a linux system (if it is not already running). eg 'python3 <a class="el" href="run_simulation_8py.html">runSimulation.py</a>'</p>
-<p >Now launch '<a class="el" href="_state_controller_8py.html">StateController.py</a>' from another terminal. 'python3 <a class="el" href="_state_controller_8py.html">StateController.py</a>'</p>
+<p >Run 'runSimulation.py' by command line with the python interpreter on a linux system (if it is not already running). eg 'python3 runSimulation.py'</p>
+<p >Now launch 'StateController.py' from another terminal. 'python3 StateController.py'</p>
 <p >WARNING: Only click the 'add agent' button if the simulation is running locally, denoted with the configuration file flags: 'event_driven_lock_movements' and 'event_driven' being set to false.</p>
 <p >For local simulations: </p><pre class="fragment">Click the 'add agent' button until the desired number of agents has been added.
 Click 'setup start and sheep' to assign agent roles based on configuration file. Sheep will make their way to destination with pathfinding.

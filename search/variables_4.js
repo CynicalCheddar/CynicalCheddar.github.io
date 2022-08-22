@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['empowerment_0',['empowerment',['../class_agent_1_1_agent.html#af18285baff069a18e63e53899ee72a2b',1,'Agent::Agent']]],
-  ['executor_1',['executor',['../class_stack_control__c.html#a865f0d576d89d427224789114a0d7f91',1,'StackControl_c']]]
+  ['y_0',['y',['../struct_pi_control__c_1_1i2c__status.html#af77c701c977665f11a4c200e3af83e7a',1,'PiControl_c::i2c_status']]]
 ];

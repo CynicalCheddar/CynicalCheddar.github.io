@@ -93,16 +93,12 @@ $(document).ready(function(){initNavTree('class_simulation_node_1_1_simulation_n
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae039d133f65959ee98bdb5d60b48bff7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulation_node_1_1_simulation_node.html#ae039d133f65959ee98bdb5d60b48bff7">__init__</a> (self)</td></tr>
-<tr class="separator:ae039d133f65959ee98bdb5d60b48bff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31943165355f4a7ba224eef3c5f8e7be"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulation_node_1_1_simulation_node.html#a31943165355f4a7ba224eef3c5f8e7be">CreateAgentListener</a> (self, topic_name, controller_callback)</td></tr>
 <tr class="separator:a31943165355f4a7ba224eef3c5f8e7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41452af6b473716d72d87ac6a4d56a0a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulation_node_1_1_simulation_node.html#a41452af6b473716d72d87ac6a4d56a0a">CreateStringListener</a> (self, topic_name, controller_callback)</td></tr>
 <tr class="separator:a41452af6b473716d72d87ac6a4d56a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1497a18e8d90e89ac83fc7c73a625959"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulation_node_1_1_simulation_node.html#a1497a18e8d90e89ac83fc7c73a625959">CreatePoseListener</a> (self, topic_name, controller_callback)</td></tr>
 <tr class="separator:a1497a18e8d90e89ac83fc7c73a625959"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c92b2eb0921c9975846147024445682"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulation_node_1_1_simulation_node.html#a1c92b2eb0921c9975846147024445682">CreateFloatPublisher</a> (self, topic_name)</td></tr>
-<tr class="separator:a1c92b2eb0921c9975846147024445682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7af46090490a5cac9b381079def7ffc8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulation_node_1_1_simulation_node.html#a7af46090490a5cac9b381079def7ffc8">CreateIntPublisher</a> (self, topic_name)</td></tr>
 <tr class="separator:a7af46090490a5cac9b381079def7ffc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1967e41ec99d4f2fcdcc734d312e0f00"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulation_node_1_1_simulation_node.html#a1967e41ec99d4f2fcdcc734d312e0f00">CreateVectorPublisher</a> (self, topic_name)</td></tr>
@@ -110,25 +106,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad47f922a25c44875c875092d601e00c8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulation_node_1_1_simulation_node.html#ad47f922a25c44875c875092d601e00c8">CreateColourPublisher</a> (self, topic_name)</td></tr>
 <tr class="separator:ad47f922a25c44875c875092d601e00c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae039d133f65959ee98bdb5d60b48bff7" name="ae039d133f65959ee98bdb5d60b48bff7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae039d133f65959ee98bdb5d60b48bff7">&#9670;&nbsp;</a></span>__init__()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def SimulationNode.SimulationNode.__init__ </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a31943165355f4a7ba224eef3c5f8e7be" name="a31943165355f4a7ba224eef3c5f8e7be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31943165355f4a7ba224eef3c5f8e7be">&#9670;&nbsp;</a></span>CreateAgentListener()</h2>
@@ -161,7 +138,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment"> Creates the subscriber responsible for adding new agents to the simulation.
+    Messages are of type std_msgs.msg.Int32; containing the ID of a new agent to add.
+    
+    
+    Parameters:
+    topic_name: Name of the topic to listen to. In normal operation, the name of the topic is '/global/robots/added'. 
+    
+    controller_callback: The method to call once a message has been received. In normal operation, the method is add_agent_callback in the runSimulation class. 
 
+
+                add_agent_callback</pre> 
 </div>
 </div>
 <a id="a41452af6b473716d72d87ac6a4d56a0a" name="a41452af6b473716d72d87ac6a4d56a0a"></a>
@@ -195,7 +182,24 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment"> Creates a generic subscriber responsible for listening to strings on a specified topic
+    Messages are of type std_msgs.msg.String.
+    
+    
+    Parameters:
+    topic_name: Name of the topic to listen to. In normal operation, the topics that are created by this method are:
 
+
+                "/controller/dispatch" - used to dispatch and recall standby and dog agents.
+
+                "/controller/config" - used to change the JSON config file by name during operation.
+    
+    controller_callback: The method to call once a message has been received. In normal operation, the methods that are called by the above subscribers are:
+
+
+                runSimulation.DispatchCallback
+
+                runSimulation.SetConfigCallback</pre> 
 </div>
 </div>
 <a id="a1497a18e8d90e89ac83fc7c73a625959" name="a1497a18e8d90e89ac83fc7c73a625959"></a>
@@ -229,35 +233,27 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment"> Creates the subscriber responsible for handling incoming pose data for a specific agent.
 
-</div>
-</div>
-<a id="a1c92b2eb0921c9975846147024445682" name="a1c92b2eb0921c9975846147024445682"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c92b2eb0921c9975846147024445682">&#9670;&nbsp;</a></span>CreateFloatPublisher()</h2>
+    Messages are of type geometry_msgs.msg.Pose; containing (x,y) position and orientation data.
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def SimulationNode.SimulationNode.CreateFloatPublisher </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>topic_name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+    A Pose Listener (subscriber) is created each time an agent is added to the simulation, unique to the agent.
+    
+    This is called in the initialisation method in the Agent.
+    
+    
+    Parameters:
+    topic_name: Name of the topic to listen to. In normal operation, the name of the topic is '/robot{id}/poses' (without the {} braces).
+    
+    controller_callback: The method to call once a message has been received. In normal operation, the method is Agent.AgentCallback in the Agent class. 
 
+
+                Agent.AgentCallback
+
+    In turn, this callback calls the method runSimulation.ControllerCallback post an update flag to the main simulation control loop, thereby facilitating event driven behaviour.
+
+
+                runSimulation.ControllerCallback</pre> 
 </div>
 </div>
 <a id="a7af46090490a5cac9b381079def7ffc8" name="a7af46090490a5cac9b381079def7ffc8"></a>
@@ -285,7 +281,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment"> Creates a publisher responsible for pushing integer messages to a specified ROS topic.
 
+    Messages are of type std_msgs.msg.Int32.
+    
+    
+    Parameters:
+    topic_name: Name of the topic to listen to. In normal operation, the topic created by this method is:
+
+
+                "/global/agents/removal_requests" - used to send removal requests to the Robot Server once an agent has been successfully removed from the simulation.</pre> 
 </div>
 </div>
 <a id="a1967e41ec99d4f2fcdcc734d312e0f00" name="a1967e41ec99d4f2fcdcc734d312e0f00"></a>
@@ -313,7 +318,25 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment"> Creates a publisher responsible for pushing vector messages to a specified ROS topic.
 
+    Messages are of type geometry_msgs.msg.Vector3
+    
+    A Vector Publisher is created each time an agent is added to the simulation, unique to the agent.
+    
+    This is called in the initialisation method in the Agent.
+    
+    The vector publisher is responsible for publishing directional vectors to its corresponding robot to facilitate its movement.
+
+    The directional vectors are defined in the global frame, irrespective of the robot's current rotation.
+
+    Vector is packed with x and y components describing 2-D vector and z component describing the agent's current rotation.
+    
+    Parameters:
+    topic_name: Name of the topic to listen to. In normal operation, the name of the topic is '/robot{id}/vectors' (without the {} braces).
+    
+
+                '/robot{id}/vectors' - used to send directional movement vectors to specified robot. </pre> 
 </div>
 </div>
 <a id="ad47f922a25c44875c875092d601e00c8" name="ad47f922a25c44875c875092d601e00c8"></a>
@@ -341,11 +364,27 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment"> Creates a publisher responsible for pushing vector messages to a specified ROS topic.
 
+    Messages are of type std_msgs.msg.RGBA
+    
+    A Colour Publisher is created each time an agent is added to the simulation, unique to the agent.
+    
+    This is called in the initialisation method in the Agent.
+    
+    The colour publisher is responsible for publishing display colours to its corresponding robot to facilitate empowerment visulisation or to distinguish agent roles.  
+
+    The RGB values each range from 0 to 1, but the alpha channel is ignored.
+    
+    Parameters:
+    topic_name: Name of the topic to listen to. In normal operation, the name of the topic is '/robot{id}/colours' (without the {} braces).
+    
+
+                '/robot{id}/colours' - used to RGBA colours to specified robot m5 Stack display.</pre> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>E:/TB PHASE/Physical_Robot_Experiment/Experiments/Python Model Event Driven/model/<a class="el" href="_simulation_node_8py.html">SimulationNode.py</a></li>
+<li>E:/TB PHASE/Physical_Robot_Experiment/Experiments/Python Model Event Driven/model/SimulationNode.py</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

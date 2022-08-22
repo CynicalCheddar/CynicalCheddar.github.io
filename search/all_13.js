@@ -1,21 +1,5 @@
 var searchData=
 [
-  ['t_0',['T',['../class_state_controller_1_1_state_controller.html#a5e6521c72181fcee87658459dd26435d',1,'StateController::StateController']]],
-  ['target_5fsheep_1',['target_sheep',['../class_agent_1_1_agent.html#ac4a29c6b44fc0d5b02b6e8257923cf94',1,'Agent::Agent']]],
-  ['text_5fobjects_2',['text_objects',['../class_agent_1_1_agent.html#a14d4daf54dcc117d228da225fe901784',1,'Agent::Agent']]],
-  ['theta_3',['theta',['../struct_pi_control__c_1_1i2c__status.html#a51429b3ed45a595b8a50c8260c683936',1,'PiControl_c::i2c_status::theta()'],['../struct_stack_control__c_1_1i2c__status.html#aca7a51b74202da045afa66fb0349eca6',1,'StackControl_c::i2c_status::theta()']]],
-  ['three_4',['THREE',['../namespacecolours.html#a5f950b93dd1c872fd15d272eb9223982',1,'colours']]],
-  ['time_5fsince_5fheartbeat_5',['time_since_heartbeat',['../classrobot__server_1_1_robot.html#aa6dafce72ba085b219bbfb386614c12b',1,'robot_server::Robot']]],
-  ['timer_6',['timer',['../class_stack_control__c.html#a03948cebe8d4405c6ed4c6371d69e407',1,'StackControl_c']]],
-  ['timer_5fcallback_7',['timer_callback',['../class_stack_control__c.html#a3f55129040e8a169fa19a0b0614f2e80',1,'StackControl_c']]],
-  ['timer_5fcalls_5fwithout_5fvector_8',['timer_calls_without_vector',['../class_stack_control__c.html#a15e490ab8f9b92e553be333ef8bc40dc',1,'StackControl_c']]],
-  ['timer_5frate_9',['TIMER_RATE',['../_stack_control_8c.html#ae8acd5bc6224a11ea1ccdecebe92d638',1,'StackControl.c']]],
-  ['topicname_10',['topicName',['../class_agent_1_1_agent.html#a4c9caf9541240c15cb33bca934db2830',1,'Agent::Agent']]],
-  ['topicposename_11',['topicPoseName',['../class_agent_1_1_agent.html#aed5f5b019f49a0ecf401998864d34bc8',1,'Agent::Agent']]],
-  ['tracking_5faruco_5fmarkers_12',['tracking_aruco_markers',['../namespacetracking__aruco__markers.html',1,'']]],
-  ['tracking_5faruco_5fmarkers_2epy_13',['tracking_aruco_markers.py',['../tracking__aruco__markers_8py.html',1,'']]],
-  ['transform_5fpos_14',['transform_pos',['../classtracking__aruco__markers_1_1_aruco_track.html#abf13d32ab1e475255b03ee5a01c92d24',1,'tracking_aruco_markers::ArucoTrack']]],
-  ['turndirection_15',['turnDirection',['../class_pi_control__c.html#acd6b2eb984625f77f1eb9361840ad111',1,'PiControl_c']]],
-  ['turning_5fmultiplier_16',['TURNING_MULTIPLIER',['../_pi_control_8c.html#a3ac184f32329ea472912b701c8a0679f',1,'PiControl.c']]],
-  ['two_17',['TWO',['../namespacecolours.html#a7b7515685b658ad4ccfe1f9c584c4913',1,'colours']]]
+  ['uncertainty_5fcallback_0',['uncertainty_callback',['../class_stack_control__c.html#a8e1682b3dbdeb3dce276f3e4be0dc6dc',1,'StackControl_c']]],
+  ['updateloop_1',['updateLoop',['../class_kinematics__c.html#a888807d0f4285388aece8d4508c31c61',1,'Kinematics_c']]]
 ];

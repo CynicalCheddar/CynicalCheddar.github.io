@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pathfindingmanager_0',['PathfindingManager',['../namespace_pathfinding_manager.html',1,'']]]
+  ['tracking_5faruco_5fmarkers_0',['tracking_aruco_markers',['../namespacetracking__aruco__markers.html',1,'']]]
 ];
